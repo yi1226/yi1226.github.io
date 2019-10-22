@@ -5,17 +5,21 @@ body{
     box-sizing: border-box;
 }
 nav{
-    width: 100%;
+    width:100%;
     height:48px;
     background-color:black;
+    margin: 0px;
+    padding: 0px;
 }
 .container{
     width:1536px;
-    height: 100%;
+    /* height: 100%; */
     background-color: black;
     display: flex;
     justify-content: flex-start;
     margin: 0 auto;
+    -webkit-box-pack: start;
+    padding: 0px;
 }
 .logo{
     width: 190px;
@@ -24,6 +28,7 @@ nav{
     justify-content: flex-start;
     align-items: center;
     flex: 0 0 auto;
+    -webkit-box-pack: start;
 }
 .logopic{
     width: 16px;
@@ -71,4 +76,82 @@ ul{
 a{
     color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.burgers{
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    height: 48px;
+    width: 48px;
+    z-index: 100;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    border-image: initial;
+}
+span{
+    position: absolute;
+    width: 24px;
+    height: 2px;
+    background-color: white;
+    transition: all 200ms linear 0ms;
+}
+.topbar{
+    top: 17px;
+    left: 12px;
+    transform: rotate(0deg);
+}
+.midbar{
+    top: 24px;
+    left: 12px;
+    opacity: 1;
+}
+.btmbar{
+    top: 31px;
+    left: 12px;
+    transform: rotate(0deg);
+}
+
+@media screen and (max-width:1680px) {
+    .container{
+        width:1336px;
+    }
+}
+@media screen and (max-width:1460px) {
+    .container{
+        width:1136px;
+    }
+    .links{
+        padding: 0px 60px 0px 120px;
+    }
+}
+@media screen and (max-width:1280px) {
+    .container{
+        width:960px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .logo{
+        width:60px;
+    }
+    .links{
+        padding: 0px 0px 0px 120px;
+    }
+}
+@media screen and (max-width:767px){
+    .links{
+        display: none;
+    }
+    .burgers{
+        display: flex;;
+    }
+   
 }

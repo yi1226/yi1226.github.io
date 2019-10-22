@@ -1,0 +1,308 @@
+body{
+    margin: 0px;
+}
+*{
+    box-sizing: border-box;
+}
+/* nav */
+nav{
+    width: 100%;
+    height:100px;
+    padding: 10px;
+    /* background-color:lightgray; */
+    position: fixed;
+}
+.navbar{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+}
+img{
+    width: 80px;
+    height:80px;
+    margin:0px 10px;
+}
+ul{
+    list-style-type: none;  
+    display: flex;
+}
+li{
+    margin: 0px;
+}
+a{
+    font-size: 20px;
+    padding: 10px;
+    color:red;
+    font-family: '標楷體';
+    transition: 1s;
+}
+a:hover{
+    background-color: lightgray;
+}
+a:visited{
+    color: gold;
+}
+/* nav */
+
+/* main */
+/* section1 */
+#section1{
+    width:100%;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    background-image:url('https://cdn.pixabay.com/photo/2015/04/02/11/20/sweden-703675_960_720.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.mask{
+    width: 100%;
+    height:100vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+}
+.container1{
+    width: 80%;
+    /* height:600px; */
+    margin: 0 auto;
+    background-image:url('https://cdn.pixabay.com/photo/2017/10/17/10/01/sunset-2860018_960_720.jpg');
+    background-size: cover;
+}
+.mask1{
+    width: 100%;
+    /* height:600px; */
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.containerleft{
+    width:50%;
+    height:600px;
+    background-image: url('https://cdn.pixabay.com/photo/2017/03/19/21/23/the-northern-lights-2157627_960_720.jpg');
+    background-size: cover;
+    margin: 0px 30px 0px 30px;
+}
+.containerleft:hover{
+    background-image: url('https://cdn.pixabay.com/photo/2016/02/07/19/48/aurora-1185466_960_720.jpg');
+    background-size: cover;
+}
+.containerright{
+    width:50%;
+    font-size: 30px;
+    line-height: 30px;
+    text-align: justify;
+    display: flex;
+    align-items: center;
+    margin: 0px 50px;
+}
+/* section1 */
+
+/* section2 */
+#section2{
+    width:100%;
+    height:100vh;
+    background-image: url('https://cdn.pixabay.com/photo/2013/12/09/03/52/northern-lights-225451_960_720.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+.mask2{
+    width: 100%;
+    height:100vh;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title{
+    padding: 10px;
+    background-color:lightsteelblue;
+    color:darkred;
+    font-size: 50px;
+}
+/* section2 */
+
+/* section3 */
+.section3{
+    width: 100%;
+    height: 100vh;
+    background-image: url('https://cdn.pixabay.com/photo/2015/01/05/09/18/aurora-589049_960_720.jpg');
+    background-size:cover;
+    background-attachment: fixed;
+}
+.mask3{
+        width: 100%;
+        height:100vh;
+        background-color: rgba(255, 255, 255, 0.5);
+        display: flex;
+        align-items: center;
+    }
+.container2{
+    width: 80%;
+    height:60%;
+    background-image:url('https://cdn.pixabay.com/photo/2016/10/13/15/17/aurora-borealis-1738020_960_720.jpg');
+    background-size:cover;
+    margin: 0 auto;
+}
+.mask4{
+    width: 100%;
+    height:100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 0 auto;
+    display: flex;
+}
+#container2-1{
+    width: 33%;
+    height:100%;
+    /* background-color: aqua; */
+    padding: 10px;
+}
+.top2-1{
+    width:100%;
+    height:30%;
+    background-image: url('https://cdn.pixabay.com/photo/2017/02/17/18/48/polar-bear-2074882_960_720.jpg');
+    background-size:cover;
+    background-position:center;
+    margin:0px 0px 10px 0px;
+}
+.btm2-1{
+    width: 100%;
+    height:70%;
+    font-size:20px;
+    letter-spacing: 2px;
+    text-align: justify;
+    padding: 10px;
+}
+#container2-2{
+    width: 34%;
+    height:100%;
+    /* background-color:gold; */
+    padding: 10px;
+}
+.top2-2{
+    width:100%;
+    height:30%;
+    background-image: url('https://cdn.pixabay.com/photo/2019/09/28/13/46/iceberg-4510819_960_720.jpg');
+    background-size:cover;
+    background-position:center;
+    margin:0px 0px 10px 0px;
+}
+.btm2-2{
+    width: 100%;
+    height:70%;
+    font-size:20px;
+    letter-spacing: 2px;
+    text-align: justify;
+    padding: 10px;
+}
+#container2-3{
+    width: 34%;
+    height:100%;
+    /* background-color:palevioletred; */
+    padding: 10px;
+}
+.top2-3{
+    width:100%;
+    height:30%;
+    background-image: url('https://cdn.pixabay.com/photo/2014/05/04/13/57/penguins-337592_960_720.jpg');
+    background-size:cover;
+    background-position:center;
+    margin:0px 0px 10px 0px;
+}
+.btm2-3{
+    width: 100%;
+    height:70%;
+    font-size:20px;
+    letter-spacing: 2px;
+    text-align: justify;
+    padding: 10px;
+}
+/* section3 */
+/* footer */
+#btm{
+    width: 100%;
+    background-image: url('https://cdn.pixabay.com/photo/2015/01/05/09/18/aurora-589049_960_720.jpg');
+    background-size:cover;
+    background-position: bottom;
+}
+.footer{
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.5);
+    text-align: center;
+}
+
+
+/* media-query */
+
+@media screen and (max-width: 991px) {
+nav{
+    background-color: lightgray;
+}
+.burger{
+    width:80px;
+    height: 80px;
+    background-color: red;
+    border-radius:20%;
+    position: relative;
+}
+.burger1{
+    width: 80%;
+    background-color:black;
+    border-radius: 5px;
+    position: absolute;
+    top:10%;
+    left:10%;
+    padding:5px;
+}
+.burger1:hover{
+    padding: 5px;
+    
+}
+.burger2{
+    width: 80%;
+    padding:5px;
+    background-color:black;
+    border-radius: 5px;
+    position: absolute;
+    top:45%;
+    left:10%;
+}
+.burger3{
+    width: 80%;
+    padding:5px;
+    background-color:black;
+    border-radius: 5px;
+    position: absolute;
+    top:80%;
+    left:10%;
+}
+img{
+    display: none;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+}
+main{
+    padding: 100px 0px 0px 0px;
+}
+.mask1{
+    width: 100%;
+    /* height: calc(100vh - 100px); */
+    display: flex;
+    flex-wrap: wrap;
+    }
+.containerleft{
+    width:100%;
+    display: flex;
+    height: 50vh;
+    order: 2;
+}
+.containerright{
+    width:100%;
+    }
+}
+

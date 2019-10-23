@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="test">TITLE</h1>
+    <button id="btn">點擊</button>
+
+
+    <script>
+
+     var click = document.querySelector ('#test') ;
+     var bbb =  document.querySelector ('#btn');
+    
+    
+     bbb.onclick = function(){
+        click.textContent = 'Hello world!This is JS test.';
+         click.style.color="red";
+     }
+        //  console.log('rtgrt');
+         
+        // var try = document.querySelector('#test');
+        // test.textContent = 'Hello world!This is JS test.';
+        // test.style.color="red";
+
+    
+</script>
+</body>
+</html>

@@ -22,16 +22,16 @@
             <div class="links">
                 <ul>
                     <li>
-                        <a href="" class="link1">Web</a>
+                        <a href="" id="link1">Web</a>
                     </li>
                     <li>
-                        <a href="" class="link1">Windows</a>
+                        <a href="" id="link1">Windows</a>
                     </li>
                     <li>
-                        <a href="" class="link1">iOS</a>
+                        <a href="" id="link1">iOS</a>
                     </li>
                     <li>
-                        <a href="" class="link1">Android</a>
+                        <a href="" id="link1">Android</a>
                     </li>
                 </ul>
             </div>
@@ -41,8 +41,33 @@
             <span class="midbar"></span>
             <span class="btmbar"></span>
         </button>
-        <div class="menu"></div>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="#link1" class="menulink1">Web</a>
+                </li>
+                <li>
+                    <a href="#link2" class="menulink2">Windows</a>
+                </li>
+                <li>
+                    <a href="#link3" class="menulink3">iOS</a>
+                </li>
+                <li>
+                    <a href="#link4" class="menulink4">Android</a>
+                </li>
+            </ul>
+        </div>
     </nav>
+    <script>
+        var burgers =document.querySelector(
+            '.burgers');
+        var menu = document.querySelector('menu');
+        burgers.onclick = function(){
+            menu.classList.toggle()
+        }
+
+
+    </script>
 </body>
 
 </html>

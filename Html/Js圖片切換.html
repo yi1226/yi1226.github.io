@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <img id="img_1"src="https://cdn.pixabay.com/photo/2019/10/14/08/12/sea-4548151_960_720.jpg" alt="">
+    
+<script>
+    var img_A="https://cdn.pixabay.com/photo/2019/09/19/19/05/tree-4490071_960_720.jpg";
+    var img_B="https://cdn.pixabay.com/photo/2019/10/03/16/35/road-4523821_960_720.jpg";
+    var change_img = document.querySelector('#img_1');
+    change_img.onclick = function(){
+        var mySrc = change_img.getAttribute('src');
+        console.log(change_img);
+        
+        if(mySrc==img_A){
+            change_img.setAttribute('src',img_B);
+        }else{
+            change_img.setAttribute('src',img_A);
+        }
+    }
+    //     img_1.src= "https://cdn.pixabay.com/photo/2019/09/23/16/18/sunset-4499023_960_720.jpg";
+    // }
+
+</script>
+</body>
+</html>

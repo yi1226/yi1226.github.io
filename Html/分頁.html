@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            background-color: lightgray;
+        }
+
+        .all {
+            margin: 10px auto 0 auto;
+            max-width: 400px;
+        }
+
+        .links {
+            display: flex;
+        }
+
+        .link_tab {
+            background-color: black;
+            color: white;
+            padding: 5px;
+            margin: 5px 3px 0px 0px;
+            border-radius: 5px 5px 0px 0px;
+            cursor: pointer;
+        }
+
+        .link_tab.active {
+            background-color: white;
+            color: black;
+        }
+
+        /* .container {
+            background-color: white;
+        } */
+
+        .tab_container {
+            /* display: none; */
+            /* padding: 20px; */
+            /* height: 0; */
+            opacity: 0;
+            pointer-events: none;
+            transition: 0.3s opacity;
+            padding: 0px;
+            height: 0px;
+            overflow: hidden;
+        }
+
+        .tab_container.active {
+            /* display: block; */
+            padding: 20px;
+            opacity: 1;
+            pointer-events: all;
+            background-color: white;
+            height: unset;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="all">
+        <div class="links">
+            <div id="link_tab1" class="link_tab active">Tab1</div>
+            <div id="link_tab2" class="link_tab">Tab2</div>
+            <div id="link_tab3" class="link_tab">Tab3</div>
+        </div>
+        <div class="container">
+            <div id="tab_container1" class="tab_container active">
+                <h1>第一頁</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error molestias libero aliquid
+                    exercitationem ratione autem magnam, sit nemo debitis architecto.</p>
+            </div>
+            <div id="tab_container2" class="tab_container">
+                <h1>第二頁</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error molestias libero aliquid
+                    exercitationem ratione autem magnam, sit nemo debitis architecto.</p>
+            </div>
+            <div id="tab_container3" class="tab_container">
+                <h1>第三頁</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Error molestias libero aliquid
+                    exercitationem ratione autem magnam, sit nemo debitis architecto.</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        var link_tab1_btn = document.querySelector('#link_tab1');
+        var link_tab2_btn = document.querySelector('#link_tab2');
+        var link_tab3_btn = document.querySelector('#link_tab3');
+
+        var tab_container1_btn = document.querySelector('#tab_container1');
+        var tab_container2_btn = document.querySelector('#tab_container2');
+        var tab_container3_btn = document.querySelector('#tab_container3');
+
+        link_tab1_btn.onclick = function () {
+            remove_active();
+            link_tab1_btn.classList.add('active');
+            tab_container1_btn.classList.add('active');
+        }
+        link_tab2_btn.onclick = function () {
+            remove_active();
+            link_tab2_btn.classList.add('active');
+            tab_container2_btn.classList.add('active');
+        }
+        link_tab3_btn.onclick = function () {
+            remove_active();
+            link_tab3_btn.classList.add('active');
+            tab_container3_btn.classList.add('active');
+        }
+
+        function remove_active() {
+            link_tab1_btn.classList.remove('active');
+            link_tab2_btn.classList.remove('active');
+            link_tab3_btn.classList.remove('active');
+            tab_container1_btn.classList.remove('active');
+            tab_container2_btn.classList.remove('active');
+            tab_container3_btn.classList.remove('active');
+        }
+
+
+    </script>
+</body>
+
+</html>

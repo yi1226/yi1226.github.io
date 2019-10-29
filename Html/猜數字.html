@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+        .title {
+            margin: 0px auto;
+            text-align: center;
+            width: 400px;
+        }
+
+        .text {
+            margin: 10px 0px;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="title">
+        <p id="title">猜數字小遊戲(0~100)</p>
+        <div class="text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore ipsa blanditiis maiores ab impedit
+            aliquam sequi cumque quis nostrum accusantium.
+        </div>
+        <input id="typenumber" type="number" min="0" max="100">
+        <button id="btn">送出</button>
+    </div>
+    <script>
+        var answer = Math.floor(Math.random() * 101);
+        var btn = document.querySelector('#btn');
+        var guessNumber;
+        var guessround = 1;
+        var p = document.querySelector("#title");
+        var content = document.querySelector('.text');
+        var startNumber = 0;
+        var endNumber = 100;
+        console.log('答案是', answer);
+        btn.onclick = function () {
+            guessNumber = parseInt(document.getElementById("typenumber").value);
+            console.log('使用者輸入:', guessNumber);
+            if (answer === guessNumber) {
+                p.textContent = '恭喜答對 !!'
+                content.textContent = `ＢＩＮＧＯ！！，您總共猜了${guessround}次`
+                btn.textContent = '重新開始遊戲'
+                btn.onclick = function () {
+                    location.reload()
+                }
+                console.log('答對');
+            } else if (answer < guessNumber) {
+                guessround++;
+                endNumber = guessNumber;
+                content.textContent = `數字太大了，再試一次！提示範圍:${startNumber}～${endNumber}`;
+                console.log('猜錯了!!太大了');
+            } else {
+                guessround++;
+                startNumber = guessNumber;
+                content.textContent = `數字太小了，再試一次！提示範圍:${startNumber}～${endNumber}`;
+                console.log('猜錯了!!太小了');
+            }
+
+        }
+    </script>
+</body>
+
+</html>

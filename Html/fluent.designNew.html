@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fluent Design System</title>
+    <link rel="stylesheet" href="../CSS/fluent.designNew.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="container">
+            <div class="logo">
+                <a href="" class="logopic"></a>
+            </div>
+            <h1>
+                <a href="" class="title">Fluent Design System</a>
+            </h1>
+            <div class="links">
+                <ul>
+                    <li id="link1">
+                        <a href="" id="link1_1">Web</a>
+                    </li>
+                    <li id="link2">
+                        <a href="" id="link2_1">Window</a>
+                    </li>
+                    <li id="link3">
+                        <a href="" id="link3_1">iOS</a>
+                    </li>
+                    <li id="link4">
+                        <a href="" id="link4_1">Android</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <button class="burgers">
+            <span class="topbar"></span>
+            <span class="midbar"></span>
+            <span class="btmbar"></span>
+        </button>
+        <div class="menu">
+            <ul>
+                <li>
+                    <a href="#link1" class="menulink1">Web</a>
+                </li>
+                <li>
+                    <a href="#link2" class="menulink2">Windows</a>
+                </li>
+                <li>
+                    <a href="#link3" class="menulink3">iOS</a>
+                </li>
+                <li>
+                    <a href="#link4" class="menulink4">Android</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <main>
+            <section class="container1">
+                <div class="content1">
+                    <div class="content1left">
+                        <div class="content1top">
+                            <h2 class="content1toptitle">Fluent Design System</h2>
+                        </div>
+                        <div class="content1btm">
+                            <p>Fluent brings the fundamentals of principled design, innovation in technology, and customer needs together as one. It’s a collective approach to creating simplicity and coherence through a shared, open design system across platforms.</p>
+                            <p>Open ecosystem, open design system.</p>
+                        </div>
+                    </div>
+                    <div class="content1right">
+                       <img class="content1rightimgR"src=""alt="">
+                       <img class="‪E:\VsCode\yi1226.github.io\Img\線條.png" alt="">
+                       <img class="content1rightimgL"src="" alt="">
+                    </div>
+                </div>
+                </section>
+    </main>
+    <script>
+        var burgers = document.querySelector(
+            '.burgers');
+        var menu = document.querySelector('.menu');
+        burgers.onclick = function () {
+            menu.classList.toggle("active");
+        }
+
+
+    </script>
+</body>
+
+</html>

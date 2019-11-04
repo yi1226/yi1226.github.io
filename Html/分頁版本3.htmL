@@ -96,8 +96,10 @@
     <script>
         $(".link_tab").click(function(){
             $(".link_tab").removeClass("active");
-            console.log(".link_tab");
-            
+            $(this).addclass("active"); 
+            $(".link_tab").index(this);
+            $(".tab_container").removeClass("active");
+            $(`.tab_container:nth-child(${index})`).addclass("active"); 
         })
 
         // var link_tab_btn = document.querySelectorAll('.link_tab');

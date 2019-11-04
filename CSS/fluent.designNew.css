@@ -155,7 +155,7 @@ span{
 main{
     width: 100%;
     position: relative;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .container1{
     width: 100%;
@@ -200,7 +200,6 @@ p{
 
 .container2{
     width: 100%;
-    height: 384px;
     position: relative;
     background-color: chocolate;
 }
@@ -263,16 +262,26 @@ p{
     padding: 0px 26px;
 }
 h3{
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+    letter-spacing: -0.03rem;
+    line-height: 40px;
+    font-weight: 600;
+    margin: 0px 0px 26px;
     font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 }
 .colorboxcontent1linkmid p{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    margin: 0px;
     font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 }
 .colorboxcontent1linkbtm{
     height: 48px;
     width: 100%;
     text-align: left;
-    display: flex;
     -webkit-box-align: center;
     align-items: center;
     flex: 0 0 auto;
@@ -280,6 +289,8 @@ h3{
 }
 .colorboxcontent1linkbtmpic{
     margin: 0px 16px 0px 0px;
+    width: 18px;
+    height: 13px;
 }
 .colorboxcontent1linkbtmtext{
     font-size: 16px;
@@ -287,6 +298,73 @@ h3{
     letter-spacing: 0.01rem;
     color: rgb(0, 0, 0);
 }
+.colorboxcontent2{
+    width: 25%;
+    height: 384px;
+    position: relative;
+    z-index: 2;
+}
+.colorboxcontent2link{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+.colorboxcontent2linktop{
+    min-height: 96px;
+    width: 100%;
+    text-align: left;
+    flex: 1 1 auto;
+    padding: 26px;
+}
+.colorboxcontent2linkmid{
+    height: 100px;
+    width: 100%;
+    flex: 0 0 auto;
+    padding: 0px 26px;
+}
+h4{
+    color: rgb(0, 0, 0);
+    font-size: 32px;
+    letter-spacing: -0.03rem;
+    line-height: 40px;
+    font-weight: 600;
+    margin: 0px 0px 26px;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+.colorboxcontent2linkmid p{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+    margin: 0px;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+.colorboxcontent2linkbtm{
+    height: 48px;
+    width: 100%;
+    text-align: left;
+    -webkit-box-align: center;
+    align-items: center;
+    flex: 0 0 auto;
+    padding: 0px 26px 10px;
+}
+.colorboxcontent2linkbtmpic{
+    margin: 0px 16px 0px 0px;
+    width: 18px;
+    height: 13px;
+}
+.colorboxcontent2linkbtmtext{
+    font-size: 16px;
+    font-family: "Segoe UI Mono", mono;
+    letter-spacing: 0.01rem;
+    color: rgb(0, 0, 0);
+}
+.colorboxcontent3{
+    
+}
+
 /* Main部分 */
 @media screen and (max-width:1680px) {
     .container{

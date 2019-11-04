@@ -196,8 +196,97 @@ p{
     flex: 1 1 auto;
 }
 /* 第一部分 */
+/* 第二部分 */
 
-
+.container2{
+    width: 100%;
+    height: 384px;
+    position: relative;
+    background-color: chocolate;
+}
+.container2::before{
+    content: "";
+    width: 50vw;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1;
+    background-color: rgb(34, 128, 200);
+}
+.container2::after{
+    content: "";
+    width: 50vw;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+    background-color: rgb(95, 207, 99);
+}
+.colorbox{
+    display: flex;
+    flex-wrap: wrap;
+    width: 1536px;
+    margin: 0px auto;
+}
+.colorboxcontent{
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.colorboxcontent1{
+    width: 25%;
+    height: 384px;
+    position: relative;
+    z-index: 2;
+}
+.colorboxcontent1link{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background-color: rgb(37, 142, 222);
+}
+.colorboxcontent1linktop{
+    min-height: 96px;
+    width: 100%;
+    text-align: left;
+    flex: 1 1 auto;
+    padding: 26px
+}
+.colorboxcontent1linkmid{
+    height: 100px;
+    width: 100%;
+    flex: 0 0 auto;
+    padding: 0px 26px;
+}
+h3{
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+.colorboxcontent1linkmid p{
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+.colorboxcontent1linkbtm{
+    height: 48px;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    flex: 0 0 auto;
+    padding: 0px 26px 10px;
+}
+.colorboxcontent1linkbtmpic{
+    margin: 0px 16px 0px 0px;
+}
+.colorboxcontent1linkbtmtext{
+    font-size: 16px;
+    font-family: "Segoe UI Mono", mono;
+    letter-spacing: 0.01rem;
+    color: rgb(0, 0, 0);
+}
 /* Main部分 */
 @media screen and (max-width:1680px) {
     .container{
@@ -241,4 +330,3 @@ p{
         pointer-events: all;
     }
 } 
-

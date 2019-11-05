@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+        class a_object {
+            constructor(brands, name, price, color,weight,capacity,workingSystem) {
+                this.brands = brands
+                this.name = name
+                this.price = price
+                this.color = color
+                this.color = weight
+                this.color = capacity
+                this.color = workingSystem
+            }
+        
+            toString() {
+                return 'Brands: '+this.brands+' Name:'+this.name
+            }
+        }
+            const phone1 = new a_object('Apple',' iphone11', 26900, 'white','194g','128GB','iOS13')
+            // console.log(phone1);
+            const phone2 = new a_object('Huawei',' HUAWEI P30 Pro', 24838, 'skyBlue','192g','128GB','EMUI 9.1')
+            const phone3 = new a_object('Samaung',' Galaxy S10', 21000, 'white','157g','128GB','Android 9.0')
+            console.log(phone1.toString());
+            
+        
+    </script>
+</body>
+</html>

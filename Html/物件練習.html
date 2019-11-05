@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .cards {
+        width: 1200px;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .card {
+        width: 33.33%;
+    }
+
+    img {
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="cards">
+        <!-- <div class="card">
+            <img src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-select-2019-family?wid=882&hei=1058&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1567022175704" alt="">
+            <p>iphone</p>
+        </div> -->
+    </div>
+    <script>
+
+        // 原始版本
+        // var a_object = {
+        //     brands:"Apple",
+        //     name:"iphone11",
+        //     price:26900,
+        //     color:"white",
+        //     weight:"194g",
+        //     capacity:"128GB",
+        //     workingSystem:"iOS13",
+        //     photo:"https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-select-2019-family?wid=882&hei=1058&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1567022175704"
+        // }
+        // var b_object = {
+        //     brands:"Huawei",
+        //     name:"HUAWEI P30 Pro",
+        //     price:24838,
+        //     color:"skyBlue",
+        //     weight:"192g",
+        //     capacity:"128GB",
+        //     workingSystem:"EMUI 9.1",
+        //     photo:"https://zdnet3.cbsistatic.com/hub/i/r/2019/04/26/525e7f41-6905-4d4b-a763-f97c6a038386/thumbnail/770x433/a7f60ece6f33756983017fc7ff347004/huawei-p30-pro-header.jpg"
+        // }
+        // var c_object = {
+        //     brands:"Samaung ",
+        //     name:"Galaxy S10",
+        //     price:21000,
+        //     color:"white",
+        //     weight:"157g",
+        //     capacity:"128GB",
+        //     workingSystem:"Android 9.0",
+        //     photo:"https://images-na.ssl-images-amazon.com/images/I/61YVqHdFRxL._SL1322_.jpg"
+        // }
+
+        // var phones =[a_object,b_object,c_object]
+
+        // 原始版本
+
+        // 簡化版本
+        var a_object = [{
+            brands: "Apple",
+            name: "iphone11",
+            price: 26900,
+            color: "white",
+            weight: "194g",
+            capacity: "128GB",
+            workingSystem: "iOS13",
+            photo: "https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-select-2019-family?wid=882&hei=1058&fmt=jpeg&qlt=80&op_usm=0.5,0.5&.v=1567022175704"
+        }, {
+            brands: "Huawei",
+            name: "HUAWEI P30 Pro",
+            price: 24838,
+            color: "skyBlue",
+            weight: "192g",
+            capacity: "128GB",
+            workingSystem: "EMUI 9.1",
+            photo: "https://zdnet3.cbsistatic.com/hub/i/r/2019/04/26/525e7f41-6905-4d4b-a763-f97c6a038386/thumbnail/770x433/a7f60ece6f33756983017fc7ff347004/huawei-p30-pro-header.jpg"
+        }, {
+            brands: "Samaung ",
+            name: "Galaxy S10",
+            price: 21000,
+            color: "white",
+            weight: "157g",
+            capacity: "128GB",
+            workingSystem: "Android 9.0",
+            photo: "https://images-na.ssl-images-amazon.com/images/I/61YVqHdFRxL._SL1322_.jpg"
+        }
+        ]
+        var cards = document.querySelector(".cards")
+
+        a_object.forEach(phone => {
+            console.log(phone);
+            cards.innerHTML += `<div class="card">
+            <img src="${phone.photo}" alt="">
+            <h>Name:${phone.name}</h>
+            <p>Brands:${phone.brands} </P>
+            <P>Price:${phone.price}</P>
+            <P>Color:${phone.color}</P>
+            <P>Weight:${phone.weight}</P>
+            <P>Capacity:${phone.capacity}</P>
+            <P>WorkingSystem:${phone.workingSystem}</P>
+             </div>`;
+        });
+    </script>
+</body>
+
+</html>

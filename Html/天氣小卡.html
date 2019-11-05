@@ -5,22 +5,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>天氣小卡</title>
 </head>
+<style>
+    .container {
+        width: 1200px;
+        height: 600px;
+        margin: 0 auto;
+        background-color: skyblue;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .content {
+        width: 33.33%;
+        height: 50%;
+    }
+
+    .title {
+        width: 33.33%;
+        height: 50%;
+        display: flex;
+    }
+
+    span {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        font-size: 50px;
+    }
+</style>
 
 <body>
+    <div class="container">
+        <!-- <div class="title">
+            <span>台中市</span></div>
+        <div class="content">Wx</div>
+        <div class="content">Pop</div>
+        <div class="content">MinT</div>
+        <div class="content">CI</div>
+        <div class="content">MaxT</div> -->
+
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-        <script>
+    <script>
         $.ajax({
             url: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D",
             cache: false,
-            success: function(res){
-              $("#results").append(res);
-              console.log(res);
-            } 
-          });
-        </script>
+            success: function (res) {
+                // $("#results").append(res);/jQuery的innerHTML寫法
+                //   console.log(res.records.location[11]);
+                // console.log(res);
+
+
+                var Taichung = res.records.location[11];
+                // console.log(res.records.location[11]);
+
+                var Wx = Taichung.weatherElement[0].time[0].parameter.parameterName;
+                var Pop = Taichung.weatherElement[1].time[1].parameter.parameterName
+                var MinT = Taichung.weatherElement[2].time[1].parameter.parameterName;
+                // console.log(MinT);
+                var CI = Taichung.weatherElement[3].time[1].parameter.parameterName;
+                // console.log(CI);
+                var MaxT = Taichung.weatherElement[4].time[1].parameter.parameterName;
+                // console.log(MaxT);
+                
+                var container = document.querySelector(".container");
+                var content = document.querySelector(".content");
+
+                container.innerHTML = `<div class="title">
+                <span>台中市</span></div>
+                <div class="content">${Wx}</div>
+                <div class="content">${Pop}</div>
+                <div class="content">${MinT}</div>
+                <div class="content">${CI}</div>
+                <div class="content">${MaxT}</div>`
+
+
+
+
+            }
+        });
+
+        // var container = document.querySelector(".container")
+        // var content = document.querySelector(".content")
+
+        // container.innerHTML = `<div class="title">
+        //     <span>台中市</span></div>
+        // <div class="content">Wx</div>
+        // <div class="content">Pop</div>
+        // <div class="content">MinT</div>
+        // <div class="content">CI</div>
+        // <div class="content">MaxT</div>`
+
+
+    </script>
 
 </body>
 

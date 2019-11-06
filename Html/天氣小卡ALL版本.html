@@ -7,6 +7,10 @@
     <title>Document</title>
 </head>
 <style>
+.all{
+    display: flex;
+    flex-wrap: wrap;
+}
 .container{
     border: 2px solid red;
 }
@@ -15,11 +19,47 @@
 
 
 <body>
-    <div class="container">
-        <h1>台中市</h1>
-        <h1>晴時多雲</h1>
-        <p></p>
-        <p></p>
+    <div class="all">
+        <div class="container">
+            <h1>地區:台中市</h1>
+            <p>天氣現象:晴時多雲</p>
+            <p>降雨機率:30$</p>
+            <p>最低溫度:20C~最高溫度:30C</p>
+        </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script>
+
+        var all = document.querySelector(".all");
+
+    $.ajax({
+        url: "https://opendata.cwb.gov.tw/api/v1/rest/datastore/F-C0032-001?Authorization=CWB-B5282D9D-8FDD-40E9-AD48-B1DF3270465D",
+        cache: false,
+        success: function (res) {
+            console.log(res);
+
+            var all_locations = res.records.location
+
+            all_locations.forEach(location=> {
+                
+            var locationName=location.locationName;
+            var locationWx = location.weatherElement[0].time[1].parameter.parameterName;
+            var locationPop = location.weatherElement[1].time[1].parameter.parameterName;
+            var locationMinT = location.weatherElement[2].time[1].parameter.parameterName;
+            var locationMaxT = location.weatherElement[4].time[1].parameter.parameterName;
+
+            all.innerHTML += `<div class="container">
+            <h1>地區:${locationName}</h1>
+            <p>天氣現象:${locationWx}</p>
+            <p>降雨機率:${locationPop}%</p>
+            <p>最低溫度:${locationMinT}C~最高溫度:${locationMaxT}C</p>
+        </div>`
+
+        });
+
+        }
+    })
+        </script>
 </body>
 </html>

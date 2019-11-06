@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,KADC,CACD,UAAU,CAAA;EACN,KAAK,EAAE,IAAI;CACd",
+    "sources": [
+        "bootstrap-fluent2.scss"
+    ],
+    "names": [],
+    "file": "bootstrap-fluent2.css"
+}

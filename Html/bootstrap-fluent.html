@@ -11,79 +11,88 @@
         integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
-        .info{
+        .info {
             position: relative;
         }
-        .row::before{
+
+        .row::before {
             content: "";
             width: 50%;
             height: 100%;
             background-color: rgb(34, 128, 200);
             position: absolute;
-            top:0px;
+            top: 0px;
             left: 0px;
             z-index: -1;
         }
-        .row::after{
+
+        .row::after {
             content: "";
             width: 50%;
             height: 100%;
             background-color: rgb(95, 207, 99);
             position: absolute;
-            top:0px;
+            top: 0px;
             right: 0px;
             z-index: -1;
         }
-        .info a{
+
+        .info a {
             text-decoration: none;
             color: black;
             display: block;
         }
-        .info .row .col-xl-3 .photo{
+
+        .info .row .col-xl-3 .photo {
             padding: 26px;
-        }   
-        .info .row .col-xl-3 h1{
-            margin: 0 0 26px 0 ;
         }
-        .info .row .col-xl-3 p{
-            margin: 0 ;
+
+        .info .row .col-xl-3 h1 {
+            margin: 0 0 26px 0;
         }
-        .info .row .col-xl-3 .btm{
+
+        .info .row .col-xl-3 p {
+            margin: 0;
+        }
+
+        .info .row .col-xl-3 .btm {
             height: 48px;
-            padding: 0px 26px 10px;
-            }
-        .info .row .col-xl-3 .btm img{
-                margin: 0px 16px 0px 0px;
-        }    
-        /* .info .row .col-xl-3{
-            position:relative;
-            z-index: 3;
-        } */
-        .info .row .col-xl-3:nth-child(1){
+            padding: 0px 26px 10px 0px;
+        }
+
+        .info .row .col-xl-3 .btm img {
+            margin: 0px 16px 0px 0px;
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 600;
+        }
+
+        .info .row .col-xl-3:nth-child(1) {
             background-color: rgb(37, 142, 222);
         }
-        .info .row .col-xl-3:nth-child(2){
+
+        .info .row .col-xl-3:nth-child(2) {
             background-color: rgb(79, 229, 255);
         }
-        .info .row .col-xl-3:nth-child(3){
+
+        .info .row .col-xl-3:nth-child(3) {
             background-color: rgb(207, 143, 255);
         }
-        .info .col-xl-3:nth-child(4){
+
+        .info .col-xl-3:nth-child(4) {
             background-color: rgb(105, 229, 110);
         }
-
-
     </style>
 </head>
 
 <body>
     <div class="info">
         <div class="container">
-            <div class="row ">
+            <div class="row">
                 <div class="col-xl-3 col-lg-6 col-12">
                     <a href="" data-aos="fade-up" data-aos-duration="2000">
                         <div class="photo">
-                                <img src="../Img/icon-globe.svg" alt="">
+                            <img src="../Img/icon-globe.svg" alt="">
                         </div>
                         <h1>Web</h1>
                         <p>Create your own web apps and add-ins.</p>
@@ -96,7 +105,7 @@
                 <div class="col-xl-3 col-lg-6 col-12">
                     <a href="" data-aos="flip-left" data-aos-duration="2000">
                         <div class="photo">
-                                <img src="../Img/icon-windows.svg" alt="">
+                            <img src="../Img/icon-windows.svg" alt="">
                         </div>
                         <h1>Window</h1>
                         <p>Create and publish your own Windows apps.</p>
@@ -109,7 +118,7 @@
                 <div class="col-xl-3 col-lg-6 col-12">
                     <a href="" data-aos="zoom-out" data-aos-duration="2000">
                         <div class="photo">
-                                <img src="../Img/icon-ios.svg" alt="">
+                            <img src="../Img/icon-ios.svg" alt="">
                         </div>
                         <h1>iOS</h1>
                         <p>Take your custom apps to the mobile market.</p>
@@ -122,7 +131,7 @@
                 <div class="col-xl-3 col-lg-6 col-12">
                     <a href="" data-aos="fade-down" data-aos-duration="2000">
                         <div class="photo">
-                                <img src="../Img/icon-android.svg" alt="">
+                            <img src="../Img/icon-android.svg" alt="">
                         </div>
                         <h1>Android</h1>
                         <p>Take your custom apps to the mobile market.</p>

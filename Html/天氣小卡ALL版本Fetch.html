@@ -39,25 +39,25 @@
             })
             .then(function (weatherData) {
 
-               var all_locations = weatherData.records.location
-            //    console.log(all_locations);
-            all_locations.forEach(location => {
-                
-                var locationName=location.locationName;
-                var locationWx = location.weatherElement[0].time[1].parameter.parameterName;
-                var locationPop = location.weatherElement[1].time[1].parameter.parameterName;
-                var locationMinT = location.weatherElement[2].time[1].parameter.parameterName;
-                var locationMaxT = location.weatherElement[4].time[1].parameter.parameterName;
+                var all_locations = weatherData.records.location
 
-                all.innerHTML+= `<div class="container">
+                all_locations.forEach(location => {
+
+                    var locationName = location.locationName;
+                    var locationWx = location.weatherElement[0].time[1].parameter.parameterName;
+                    var locationPop = location.weatherElement[1].time[1].parameter.parameterName;
+                    var locationMinT = location.weatherElement[2].time[1].parameter.parameterName;
+                    var locationMaxT = location.weatherElement[4].time[1].parameter.parameterName;
+
+                    all.innerHTML += `<div class="container">
                  <h1>地區:${locationName}</h1>
                  <p>天氣現象:${locationWx}</p>
                  <p>降雨機率:${locationPop}%</p>
                 <p>最低溫度:${locationMinT}C~最高溫度:${locationMaxT}C</p>
              </div>`
 
-            });
-               
+                });
+
             });
 
     </script>

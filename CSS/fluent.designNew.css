@@ -521,6 +521,10 @@ h6{
         top: -40px;
         right: 36px;
     }
+    .content1rightimgL{
+        bottom: 160px;
+        left: 30px;
+    }
 }
 @media screen and (max-width:1460px) {
     .container{
@@ -538,6 +542,10 @@ h6{
     .content1rightimgR{
         top: 15px;
         right: 36px;
+    }
+    .content1rightimgL{
+        bottom: 120px;
+        left: 30px;
     }
 }
 @media screen and (max-width:1280px) {
@@ -559,6 +567,9 @@ h6{
     }
     .content1right img{
         max-width: 100%;
+    }
+    .content1rightimgL{
+        display: none;
     }
 }
 

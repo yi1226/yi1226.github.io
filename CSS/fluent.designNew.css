@@ -74,6 +74,9 @@ a{
     text-decoration: none;
     color: white;
     transition: color 200ms linear 0ms;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: 600;
 }
 #link1_1:hover{
     color:rgb(36, 118, 196)
@@ -101,7 +104,7 @@ a{
     background-color: transparent;
     border: none;
 }
-span{
+.burgers span{
     position: absolute;
     transition: all 200ms linear 0ms;
 }
@@ -173,6 +176,7 @@ main{
     color: rgb(79, 229, 255);
     font-weight: 600;
     margin: 0px 0px 0px -6px;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 }
 .content1btm{
     width: 100%;
@@ -181,6 +185,7 @@ main{
 .contentbtmContent{
     width: 100%;
     max-width: 352px;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 }
 p{
     color: rgb(255, 255, 255);
@@ -296,6 +301,7 @@ h3{
     height: 48px;
     width: 100%;
     text-align: left;
+    display: flex;
     -webkit-box-align: center;
     align-items: center;
     flex: 0 0 auto;
@@ -303,8 +309,6 @@ h3{
 }
 .colorboxcontent1linkbtmpic{
     margin: 0px 16px 0px 0px;
-    width: 18px;
-    height: 13px;
 }
 .colorboxcontent1linkbtmtext{
     font-size: 16px;
@@ -363,6 +367,7 @@ h4{
     height: 48px;
     width: 100%;
     text-align: left;
+    display: flex;
     -webkit-box-align: center;
     align-items: center;
     flex: 0 0 auto;
@@ -370,8 +375,6 @@ h4{
 }
 .colorboxcontent2linkbtmpic{
     margin: 0px 16px 0px 0px;
-    width: 18px;
-    height: 13px;
 }
 .colorboxcontent2linkbtmtext{
     font-size: 16px;
@@ -430,6 +433,7 @@ h5{
     height: 48px;
     width: 100%;
     text-align: left;
+    display: flex;
     -webkit-box-align: center;
     align-items: center;
     flex: 0 0 auto;
@@ -495,6 +499,7 @@ h6{
     height: 48px;
     width: 100%;
     text-align: left;
+    display: flex;
     -webkit-box-align: center;
     align-items: center;
     flex: 0 0 auto;
@@ -525,6 +530,9 @@ h6{
         bottom: 160px;
         left: 30px;
     }
+    .colorbox{
+        width:1336px;
+    }
 }
 @media screen and (max-width:1460px) {
     .container{
@@ -546,6 +554,21 @@ h6{
     .content1rightimgL{
         bottom: 120px;
         left: 30px;
+    }
+    .colorbox{
+        width:1136px;
+    }
+    .colorboxcontent1linkmid{
+        height: 180px;
+    }
+    .colorboxcontent2linkmid{
+        height: 180px;
+    }
+    .colorboxcontent3linkmid{
+        height: 180px;
+    }
+    .colorboxcontent4linkmid{
+        height: 180px;
     }
 }
 @media screen and (max-width:1280px) {
@@ -571,6 +594,33 @@ h6{
     .content1rightimgL{
         display: none;
     }
+    .colorbox{
+        width:960px;
+    }
+    .colorboxcontent1linkbtm{
+        padding: 0px 30px;
+    }
+    .colorboxcontent1linkbtmtext{
+        font-size: 14px;
+    }
+    .colorboxcontent2linkbtm{
+        padding: 0px 30px;  
+    }
+    .colorboxcontent2linkbtmtext{
+        font-size: 14px;
+    }
+    .colorboxcontent3linkbtm{
+        padding: 0px 30px;  
+    }
+    .colorboxcontent3linkbtmtext{
+        font-size: 14px;
+    }
+    .colorboxcontent4linkbtm{
+        padding: 0px 30px;  
+    }
+    .colorboxcontent4linkbtmtext{
+        font-size: 14px;
+    }
 }
 
 @media screen and (max-width:1024px) {
@@ -587,6 +637,57 @@ h6{
     .content1{
         width: 100%;
         padding: 30px;
+    }
+    .colorbox{
+        width: 100%;
+        padding: 0px;
+    }
+    .colorboxcontent{
+        flex-wrap: wrap;
+    }
+    .colorboxcontent1{
+        width: 50%;
+        height: 320px;
+    }
+    .colorboxcontent1linktop{
+        padding: 30px 30px 16px;
+    }
+    .colorboxcontent1linkmid{
+        height: auto;
+        padding: 0px 30px;
+    }
+    .colorboxcontent2{
+        width: 50%;
+        height: 320px;
+    }
+    .colorboxcontent2linktop{
+        padding: 30px 30px 16px;
+    }
+    .colorboxcontent2linkmid{
+        height: auto;
+        padding: 0px 30px;
+    }
+    .colorboxcontent3{
+        width: 50%;
+        height: 320px;
+    }
+    .colorboxcontent3linktop{
+        padding: 30px 30px 16px;
+    }
+    .colorboxcontent3linkmid{
+        height: auto;
+        padding: 0px 30px;
+    }
+    .colorboxcontent4{
+        width: 50%;
+        height: 320px;
+    }
+    .colorboxcontent4linktop{
+        padding: 30px 30px 16px;
+    }
+    .colorboxcontent4linkmid{
+        height: auto;
+        padding: 0px 30px;
     }
 }
 @media screen and (max-width:960px){
@@ -624,6 +725,18 @@ h6{
     .content1btm{
         margin: 60px 0px 30px;
     }
+    .colorboxcontent1{
+        width: 100%;
+    }
+    .colorboxcontent2{
+        width: 100%;
+    }
+    .colorboxcontent3{
+        width: 100%;
+    }
+    .colorboxcontent4{
+        width: 100%;
+    }
 } 
 @media screen and (max-width:670px){
     .container1{
@@ -642,4 +755,18 @@ h6{
     .content1right{
         display: none;
     }
+}
+@media screen and (max-width:500px){
+.colorboxcontent1{
+    height: auto;
+}
+.colorboxcontent2{
+    height: auto;
+}
+.colorboxcontent3{
+    height: auto;
+}
+.colorboxcontent4{
+    height: auto;
+}
 }

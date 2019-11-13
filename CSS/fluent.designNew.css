@@ -514,6 +514,90 @@ h6{
     letter-spacing: 0.01rem;
     color: rgb(0, 0, 0);
 }
+/* 第二部分*/
+
+/* 第三部分 */
+.container3{
+    width: 100%;
+    min-height: 768px;
+    background: url(https://www.microsoft.com/design/fluent/assets/images/msft-verge-fluent.jpg) 50% center / cover no-repeat fixed rgb(204, 204, 204);
+}
+.content3{
+    width: 1536px;
+    margin: 0px auto;
+}
+.content3top{
+    width: 100%;
+    /* opacity: 0; */
+    transform: translateY(20px);
+    padding: 10px 20px 0px;
+    transition: opacity 600ms linear 0ms, transform 600ms linear 0ms;
+}
+.content3top.active{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.content3toptext{
+    color: rgb(0, 0, 0);
+    font-size: 128px;
+    line-height: 150px;
+    font-weight: 600;
+    margin: 0px;
+    padding: 0px;
+    border-spacing: 0px;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+.content3btm{
+    width: 100%;
+    /* opacity: 0; */
+    transform: translateY(20px);
+    margin: 60px 0px 0px;
+    transition: opacity 600ms linear 0ms, transform 600ms linear 0ms;
+}
+.content3btm.active{
+    opacity: 1;
+    transform: translateY(0px);
+}
+.content3btm_1{
+    width: 100%;
+    max-width: 384px;
+    padding: 0px 16px 0px 24px;
+}
+.content3btm_1 p{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    margin: 0px;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+/* 第三部分 */
+
+/* 第四部份 */
+
+.container4{
+    width: 100%;
+    background-color: rgb(25, 25, 25);
+}
+.content4{
+    position: relative;
+    width: 1536px;
+    margin: 0px auto;
+}
+.content4R{
+    position: absolute;
+    top: -200px;
+    right: 130px;
+    pointer-events: none;
+    z-index: 4;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: opacity 600ms linear 0ms, transform 600ms linear 0ms;
+}
+.content4R.active{
+    opacity: 1;
+    transform: translateY(0px);
+}
 /* Main部分 */
 @media screen and (max-width:1680px) {
     .container{
@@ -532,6 +616,9 @@ h6{
     }
     .colorbox{
         width:1336px;
+    }
+    .content3{
+        width: 1336px;
     }
 }
 @media screen and (max-width:1460px) {
@@ -569,6 +656,19 @@ h6{
     }
     .colorboxcontent4linkmid{
         height: 180px;
+    }
+    .content3{
+        width: 1136px;
+    }
+    .content3top{
+        padding: 10px 0px 0px 16px;
+    }
+    .content3toptext{
+        font-size: 96px;
+        line-height: 120px;
+    }
+    .content3btm{
+        margin: 40px 0px 0px;
     }
 }
 @media screen and (max-width:1280px) {
@@ -621,6 +721,22 @@ h6{
     .colorboxcontent4linkbtmtext{
         font-size: 14px;
     }
+    .container3{
+        min-height: 668px;
+    }
+    .content3{
+        width: 960px;
+    }
+    .content3top{
+        padding: 20px 0px 60px;
+    }
+    .content3btm{
+        margin: 0px;
+    }
+    .content3btm_1{
+        margin: 0px;
+        padding: 0px 5px;
+    }    
 }
 
 @media screen and (max-width:1024px) {
@@ -689,6 +805,21 @@ h6{
         height: auto;
         padding: 0px 30px;
     }
+    .content3{
+        width: 100%;
+        padding: 0px 30px;
+    }
+    .content3top{
+        padding: 29px 0px 40px;
+    }
+    .content3toptext{
+        font-size: 86px;
+        line-height: 90px;
+        margin: 0px;
+    }
+    .content3btm_1{
+        padding: 0px 0px 0px 4px;
+    } 
 }
 @media screen and (max-width:960px){
     .content1{
@@ -705,6 +836,13 @@ h6{
     .content1right{
         width: 40%;
         padding: 0px 0px 0px 30px;
+    }
+    .container3{
+        background-attachment: scroll;
+    }
+    .content3{
+        width: 100%;
+        padding: 0px 30px;
     }
 }
 @media screen and (max-width:767px){
@@ -755,6 +893,13 @@ h6{
     .content1right{
         display: none;
     }
+    .container3{
+        min-height: 768px;
+    }
+    .content3toptext{
+        font-size: 64px;
+        line-height: 70px;
+    }
 }
 @media screen and (max-width:500px){
 .colorboxcontent1{
@@ -768,5 +913,9 @@ h6{
 }
 .colorboxcontent4{
     height: auto;
+}
+.content3toptext{
+    font-size: 48px;
+    line-height: 60px;
 }
 }

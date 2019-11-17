@@ -736,7 +736,7 @@ h6{
     transform: translateY(122px);
 }
 .content7_1pic1.style{
-    transform: translate3d(0px, -29.1278px, 0px);
+    transform: translate3d(0px, -30px, 0px);
 }
 .content7_1pic2{
     position: absolute;
@@ -752,10 +752,12 @@ h6{
     line-height: 1;
     color: rgb(0, 0, 0);
     font-weight: 600;
+    margin: 0px;
+    padding: 0px;
 }
 .content7_2text.style{
-    opacity: 0.999938;
-    transform: translate3d(0px, 0.0123768px, 0px);
+    opacity: 0.999647;
+    transform: translate3d(0px, 0.0706003px, 0px);
 }
 .content7_3text {
     position: absolute;
@@ -765,13 +767,83 @@ h6{
     line-height: 1;
     color: rgb(0, 0, 0);
     font-weight: 600;
+    margin: 0px;
+    padding: 0px;
 }
 .content7_3text.style{
-    opacity: 0.968135;
-    transform: translate3d(0px, 6.37303px, 0px);
+    opacity: 0.996147;
+    transform: translate3d(0px, 0.770508px, 0px);
 }
+.content7_4{
+    position: absolute;
+    top: 550px;
+    left: 370px;
+    pointer-events: none;
+    /* opacity: 0; */
+    transform: translateY(20px);
+    transition: opacity 600ms linear 0ms, transform 600ms linear 0ms;
+}
+.content7_4.active{
+    opacity: 1;
+    transform: translateY(0px);
+}
+/* 第七部分 */
 
+/* 第八部分 */
+
+.container8{
+    width: 100%;
+    background-color: rgb(204, 204, 204);
+    min-height: 820px;
+    position: relative;
+}
+.content8_1{
+    width: 1536px;
+    position: relative;
+    margin: 0px auto;
+}
+.content8_1titile{
+    width: 100%;
+    padding: 140px 40px 0px 8px;
+}
+.content8_1titile h2{
+    color: rgb(0, 0, 0);
+    font-size: 128px;
+    line-height: 150px;
+    font-weight: 600;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+.content8_1box{
+    width: 100%;
+    margin: 60px 0px 0px;
+}
+.content8_1text{
+    width: 100%;
+    max-width: 384px;
+    padding: 0px 16px;
+}
+.content8_1text p{
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    margin: 0px;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+.content8_2{
+    position: absolute;
+    top: 200px;
+    right: 0px;
+}
+.content8_2 img{
+    max-width: 1000px;
+}
 /* Main部分 */
+@media screen and (max-width:1940px) {
+    .content8_2 img{
+        max-width: 900px;
+    }
+}
 @media screen and (max-width:1680px) {
     .container{
         width:1336px;
@@ -808,6 +880,24 @@ h6{
     .content6_1text h1{
         font-size: 96px;
         line-height: 128px;
+    }
+    .content7{
+        width: 1336px;
+    }
+    .content7_2text{
+        top: -40px;
+        font-size: 295px;
+    }
+    .content7_3text{
+        top: 120px;
+        right: -30px;
+        font-size: 295px;
+    }
+    .content8_1{
+        width: 1336px;
+    }
+    .content8_2 img{
+        max-width: 50vw;
     }
 }
 @media screen and (max-width:1460px) {
@@ -870,6 +960,30 @@ h6{
     }
     .content6_1text{
         width: 1136px;
+    }
+    .content7{
+        width: 1136px;
+    }
+    .content7_1{
+        display: none;
+    }
+    .content7_2text{
+        top: -20px;
+        left: 0px;
+    }
+    .content7_3text{
+        top: 180px;
+        right: -30px;
+    }
+    .content7_4{
+        top: 550px;
+        left: 370px;
+    }
+    .content8_1{
+        width: 1136px;
+    }
+    .content8_1titile{
+        padding: 60px 40px 0px 8px;
     }
 }
 @media screen and (max-width:1280px) {
@@ -948,6 +1062,38 @@ h6{
         width: 960px;
     }
     .content6_1text h1{
+        line-height: 104px;
+    }
+    .container7{
+        min-height: 668px;
+    }
+    .content7{
+        width: 960px;
+    }
+    .content7_2text{
+        font-size: 228px;
+        top: 40px;
+        left: 14px;
+    }
+    .content7_3text{
+        font-size: 228px;
+        top: 220px;
+        right: 10px;
+    }
+    .content7_4{
+        display: none;
+    }
+    .container8{
+        min-height: 668px;
+    }
+    .content8_1{
+        width: 960px;
+    }
+    .content8_1titile{
+        padding: 29px 0px 0px;
+    }
+    .content8_1titile h2{
+        font-size: 96px;
         line-height: 104px;
     }
 }
@@ -1053,6 +1199,34 @@ h6{
         line-height: 90px;
         margin: 0px;
     }
+    .content7{
+        width: 100%;
+        padding: 0px 30px;
+    }
+    .content8_1{
+        width: 100%;
+        padding: 0px 30px;
+    }
+    .content8_1titile h2{
+        font-size: 86px;
+        line-height: 90px;
+        margin: 0px;
+    }
+    .content8_1text{
+        padding: 0px 0px 0px 4px;
+    }
+    .content8_2{
+        right: -20vw;
+    }
+    .content8_1text{
+        padding: 0px 0px 0px 4px;
+    }
+    .content8_2{
+        right: -20vw;
+    }
+    .content8_2 img{
+        max-width: 70vw;
+    }
 }
 @media screen and (max-width:960px){
     .content1{
@@ -1088,6 +1262,10 @@ h6{
     .content5_1{
         padding: 0px;   
     }
+    .content8_1{
+        width: 100%;
+        padding: 0px 30px 40px;
+    }
 }
 @media screen and (max-width:767px){
     .links{
@@ -1122,6 +1300,9 @@ h6{
     .content4R{
         top: -300px;
         right: 100px;
+    }
+    .content8_2 img{
+        max-width: 60vw;
     }
 } 
 @media screen and (max-width:670px){
@@ -1165,6 +1346,25 @@ h6{
         font-size: 64px;
         line-height: 70px;
     }
+    .content7_2text{
+        font-size: 168px;
+    }
+    .content7_3text{
+        font-size: 168px;
+    }
+    .container8{
+        min-height: 468px;
+    }
+    .content8_1titile h2{
+        font-size: 64px;
+        line-height: 70px;
+    }
+    .content8_1box{
+        margin: 40px 0px 0px;
+    }
+    .content8_2{
+        display: none;
+    }
 }
 @media screen and (max-width:500px){
 .colorboxcontent1{
@@ -1183,4 +1383,26 @@ h6{
     font-size: 48px;
     line-height: 60px;
 }
+.content7_2text{
+    font-size: 128px;
+}
+.content7_3text{
+    font-size: 128px;
+}
+.content8_1titile h2{
+    font-size: 48px;
+    line-height: 60px;
+}
+}
+@media screen and (max-width:400px){
+    .container7{
+        min-height: 500px;
+    }
+    .content7_2text{
+        font-size: 96px;
+    }
+    .content7_3text{
+        font-size: 96px;
+        top: 160px;
+    }
 }

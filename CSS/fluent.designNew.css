@@ -812,6 +812,8 @@ h6{
     line-height: 150px;
     font-weight: 600;
     font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    margin: 0px;
+    padding: 0px;
 }
 .content8_1box{
     width: 100%;

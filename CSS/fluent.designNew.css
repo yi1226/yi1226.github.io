@@ -1284,7 +1284,7 @@ h6{
 }
 
 /* 第十一部份 */
-
+/* Main部分 */
 /* footer */
 
 .btmdiv{
@@ -1312,7 +1312,53 @@ h6{
     width:16px;
     height:16px;
 }
-/* Main部分 */
+.btmcontent2{
+    height: 48px;
+    flex: 1 1 auto;
+    padding: 0px 100px 0px 0px;
+}
+.btmcontent2 ul{
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.btmcontent2 ul li{
+    width: auto;
+    color: rgb(255, 255, 255);
+    font-size: 12px;
+    line-height: 48px;
+    font-weight: 400;
+    margin: 0px;
+    padding: 0px;
+}
+.btmcontent2 ul li a{
+    color: rgb(255, 255, 255);
+    position: relative;
+    text-decoration: none;
+}
+.btmcontent3{
+    display: flex;
+    height: 48px;
+}
+.btmcontent3 a{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    -webkit-box-pack: end;
+    justify-content: flex-end;
+    -webkit-box-align: center;
+    align-items: center;
+}
+.btmcontent3 a img{
+    max-width: 48px;
+    max-height: 48px;
+}
+/* footer */
+
 @media screen and (max-width:1940px) {
     .content8_2 img{
         max-width: 900px;
@@ -1388,6 +1434,9 @@ h6{
     .content11boxc2{
         width: 50%;
         padding: 0px 16px 35px;
+    }
+    .btmcontent{
+        width: 1336px;
     }
 }
 @media screen and (max-width:1460px) {
@@ -1504,6 +1553,9 @@ h6{
         width: 1136px;
     }
     .content11{
+        width: 1136px;
+    }
+    .btmcontent{
         width: 1136px;
     }
 }
@@ -1640,6 +1692,12 @@ h6{
     }
     .content11{
         width: 960px;
+    }
+    .btmcontent{
+        width: 960px;
+    }
+    .btmcontent1{
+        width: 40px;
     }
 }
 
@@ -1833,6 +1891,36 @@ h6{
     .content11boxc2{
         padding: 0px 30px 35px;
     }
+    .btmdiv{
+        height: auto;
+        padding: 0px 0px 18px;
+    }
+    .btmcontent{
+        width: 100%;
+        flex-wrap: wrap;
+        position: relative;
+        padding: 0px 30px;
+    }
+    .btmcontent1{
+        width: 80px;
+        flex: 0 0 auto;
+    }
+    .btmcontent2{
+        width: 100%;
+        height: auto;
+        flex: 1 1 auto;
+        padding: 0px;
+    }
+    .btmcontent3{
+        width: 50%;
+        top: 0px;
+        -webkit-box-pack: end;
+        justify-content: flex-end;
+        position: absolute;
+        right: 30px;
+        flex: 1 1 auto;
+        padding: 0px;
+    }
 }
 @media screen and (max-width:960px){
     .content1{
@@ -1903,6 +1991,10 @@ h6{
     }
     .content11boxc2btm span{
         font-size: 12px;
+    }
+    .btmcontent{
+        width: 100%;
+        padding: 0px 30px;
     }
 }
 @media screen and (max-width:767px){
@@ -2026,6 +2118,19 @@ h6{
     .content8_2{
         display: none;
     }
+    .btmcontent{
+        width: 100%;
+        padding: 10px 30px 0px;
+    }
+    .btmcontent2 ul{
+        -webkit-box-pack: start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+    }
+    .btmcontent2 ul li{
+        line-height: 30px;
+        margin: 0px 20px 0px 0px;
+    }
 }
 @media screen and (max-width:500px){
 .colorboxcontent1{
@@ -2074,6 +2179,20 @@ h6{
 }
 .content9pic4{
     display: none;
+}
+.btmcontent3{
+    position: relative;
+    width: 100%;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    right: auto;
+    left: auto;
+    top: auto;
+    margin: 16px 0px 0px;
+}
+.btmcontent3 a{
+    -webkit-box-pack: start;
+    justify-content: flex-start;
 }
 }
 @media screen and (max-width:400px){

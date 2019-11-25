@@ -995,6 +995,9 @@ h6{
     transition: fill 200ms linear 0ms;
     fill: rgb(255, 255, 255);
 }
+.content10box1 a:hover svg path{
+    fill: rgb(0, 0, 0);
+}
 .content10box1link2R{
     -webkit-box-align: center;
     align-items: center;
@@ -1025,6 +1028,57 @@ h6{
 .content10box2link:hover{
     background-color: rgb(255, 255, 255);
 }
+.content10box2link1{
+    width: 100%;
+    padding: 16px;
+    flex: 1 1 auto;
+    margin: 2px 0px 0px;
+}
+.content10box2link1 p{
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+    transition: color 200ms linear 0ms;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+.content10box2 a:hover p{
+    color: rgb(0, 0, 0);
+}
+.content10box2link2{
+    width: 100%;
+    display: flex;
+    padding: 16px;
+    flex: 0 0 auto;
+}
+.content10box2link2L{
+    width: 24px;
+    flex: 0 0 auto;
+    margin: 0px 16px 0px 0px;
+}
+.content10box2link2 svg{
+    max-width: 20px;
+    height: auto;
+}
+.content10box2link2 svg path{
+    fill: rgb(255, 255, 255);
+    transition: fill 200ms linear 0ms;
+}
+.content10box2 a:hover svg path{
+    fill: rgb(0, 0, 0);
+}
+.content10box2link2R{
+    -webkit-box-align: center;
+    align-items: center;
+    flex: 1 1 auto;
+}
+.content10box2link2 label{
+    color: rgb(255, 255, 255);
+    transition: color 200ms linear 0ms;
+}
+.content10box2 a:hover label{
+    color: rgb(0, 0, 0);
+}
 .content10box3{
     width: 25%;
     height: 384px;
@@ -1043,6 +1097,55 @@ h6{
 .content10box3link:hover{
     background-color: rgb(255, 255, 255);
 }
+.content10box3link1{
+    width: 100%;
+    padding: 16px;
+    flex: 1 1 auto;
+    margin: 2px 0px 0px;
+}
+.content10box3link p{
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    transition: color 200ms linear 0ms;
+}
+.content10box3 a:hover p{
+    color: rgb(0, 0, 0);
+}
+.content10box3link2{
+    width: 100%;
+    display: flex;
+    padding: 16px;
+    flex: 0 0 auto;
+}
+.content10box3link2L{
+    width: 24px;
+    flex: 0 0 auto;
+    margin: 0px 16px 0px 0px;
+}
+.content10box3 svg{
+    max-width: 20px;
+    height: auto;
+}
+.content10box3 svg path{
+    transition: fill 200ms linear 0ms;
+}
+.content10box3 a:hover path{
+    fill: rgb(0, 0, 0);
+}
+.content10box3link2R{
+    -webkit-box-align: center;
+    align-items: center;
+    flex: 1 1 auto;
+}
+.content10box3 label{
+    transition: color 200ms linear 0ms;
+    color: rgb(0, 0, 0);
+}
+.content10box3 a:hover label{
+    color: rgb(0, 0, 0);
+}
 .content10box4{
     width: 25%;
     height: 384px;
@@ -1060,6 +1163,154 @@ h6{
 }
 .content10box4link:hover{
     background-color: rgb(255, 255, 255);
+}
+.content10box4link1{
+    width: 100%;
+    padding: 16px;
+    flex: 1 1 auto;
+    margin: 2px 0px 0px;
+}
+.content10box4link1 p{
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+}
+.content10box4 a:hover p{
+    color: rgb(0, 0, 0);
+}
+.content10box4link2{
+    width: 100%;
+    display: flex;
+    padding: 16px;
+    flex: 0 0 auto;
+}
+.content10box4link2L{
+    width: 24px;
+    flex: 0 0 auto;
+    margin: 0px 16px 0px 0px;
+}
+.content10box4link2L svg{
+    max-width: 20px;
+    height: auto;
+}
+.content10box4link2L svg path{
+    transition: fill 200ms linear 0ms;
+}
+.content10box4 a:hover path{
+    fill: rgb(0, 0, 0);
+}
+.content10box4link2R{
+    -webkit-box-align: center;
+    align-items: center;
+    flex: 1 1 auto;
+}
+.content10box4link2R label{
+    color: rgb(0, 0, 0);
+    transition: color 200ms linear 0ms;
+}
+.content10box4 a:hover label{
+    color: rgb(0, 0, 0);
+}
+/* 第十部分 */
+
+/* 第十一部份 */
+.contaniner11{
+    width: 100%;
+}
+.content11{
+    width: 1536px;
+    margin: 0px auto;
+}
+.content11box{
+    width: 100%;
+}
+.content11boxc{
+    width: 100%;
+    display: flex;
+    padding: 0px 0px 200px;
+}
+.content11boxc1{
+    width: 575px;
+    flex: 0 0 auto;
+}
+.content11boxc1 h2{
+    font-size: 32px;
+    line-height: 40px;
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    padding: 0px 0px 0px 16px;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+.content11boxc2{
+    flex: 1 1 auto;
+    padding: 0px 330px 35px 208px;
+}
+.content11boxc2top{
+    width: 100%;
+}
+.content11boxc2top p{
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    margin: 0px;
+    padding: 0px;
+    border-spacing: 0px;
+}
+.content11boxc2btm{
+    width: 100%;
+    margin: 70px 0px 0px;
+}
+.container11 a{
+    display: flex;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+.container11 a:hover{
+    opacity: 0.6;
+}
+.content11boxc2btm img{
+    margin: 0px 16px 0px 0px;
+}
+.content11boxc2btm span{
+    font-size: 16px;
+    font-family: "Segoe UI Mono", mono;
+    letter-spacing: 0.01rem;
+    line-height: 1;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* 第十一部份 */
+
+/* footer */
+
+.btmdiv{
+    width: 100%;
+    height: 48px;
+}
+.btmcontent{
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 1536px;
+    margin: 0px auto;
+}
+.btmcontent1{
+    width: 190px;
+    height: 48px;
+    display: flex;
+    -webkit-box-pack: start;
+    justify-content: flex-start;
+    -webkit-box-align: center;
+    align-items: center;
+    flex: 0 0 auto;
+}
+.btmcontent1 img{
+    width:16px;
+    height:16px;
 }
 /* Main部分 */
 @media screen and (max-width:1940px) {
@@ -1124,6 +1375,19 @@ h6{
     }
     .content9{
         width: 1336px;
+    }
+    .content10{
+        width: 1336px;
+    }
+    .content11{
+        width: 1336px;
+    }
+    .content11boxc1{
+        width: 50%;
+    }
+    .content11boxc2{
+        width: 50%;
+        padding: 0px 16px 35px;
     }
 }
 @media screen and (max-width:1460px) {
@@ -1231,6 +1495,16 @@ h6{
     .content9pic5{
         top: 470px;
         right: 220px;
+    }
+    .container10{
+        position: relative;
+        z-index: 1;
+    }
+    .content10{
+        width: 1136px;
+    }
+    .content11{
+        width: 1136px;
     }
 }
 @media screen and (max-width:1280px) {
@@ -1347,6 +1621,24 @@ h6{
         min-height: 668px;
     }
     .content9{
+        width: 960px;
+    }
+    .content10{
+        width: 960px;
+    }
+    .content10box1link1 p{
+        font-size: 28px;
+    }
+    .content10box2link1 p{
+        font-size: 28px;
+    }
+    .content10box3link1 p{
+        font-size: 28px;
+    }
+    .content10box4link1 p{
+        font-size: 28px;
+    }
+    .content11{
         width: 960px;
     }
 }
@@ -1484,6 +1776,63 @@ h6{
         width: 100%;
         padding: 0px 30px;
     }
+    .container10{
+        margin: 0px 0px 60px;
+    }
+    .content10{
+        width: 100%;
+    }
+    .content10box{
+        flex-wrap: wrap;
+    }
+    .content10box1{
+        width: 50%;
+    }
+    .content10box1link1{
+        padding: 19px 28px;
+    }
+    .content10box1link2{
+        padding: 0px 30px 30px;
+    }
+    .content10box2{
+        width: 50%;
+    }
+    .content10box2link1{
+        padding: 19px 28px;
+    }
+    .content10box2link2{
+        padding: 0px 30px 30px;
+    }
+    .content10box3{
+        width: 50%;
+    }
+    .content10box3link1{
+        padding: 19px 28px;
+    }
+    .content10box3link2{
+        padding: 0px 30px 30px;
+    }
+    .content10box4{
+        width: 50%;
+    }
+    .content10box4link1{
+        padding: 19px 28px;
+    }
+    .content10box4link2{
+        padding: 0px 30px 30px;
+    }
+    .content11{
+        width: 100%;
+    }
+    .content11boxc1{
+        margin: 0px 30px 30px;
+    }
+    .content11boxc1 p{
+        padding: 0px;
+    }
+    .content11boxc2{
+        padding: 0px 30px 35px;
+    }
 }
 @media screen and (max-width:960px){
     .content1{
@@ -1530,6 +1879,31 @@ h6{
         width: 100%;
         padding: 0px 30px;
     }
+    .container10{
+        margin: 0px;
+    }
+    .content11{
+        width: 100%;
+        padding: 0px 30px;
+    }
+    .content11boxc{
+        flex-wrap: wrap;
+        padding: 0px;
+    }
+    .content11boxc1{
+        width: 100%;
+        margin: 30px 0px;
+    }
+    .content11boxc2{
+        width: 100%;
+        padding: 0px 0px 35px;
+    }
+    .content11boxc2btm{
+        margin: 30px 0px 0px;
+    }
+    .content11boxc2btm span{
+        font-size: 12px;
+    }
 }
 @media screen and (max-width:767px){
     .links{
@@ -1570,6 +1944,26 @@ h6{
     }
     .content9pic5{
         display: none;
+    }
+    .content10box1{
+        width: 100%;
+        height: auto;
+        min-height: 260px;
+    }
+    .content10box2{
+        width: 100%;
+        height: auto;
+        min-height: 260px;
+    }
+    .content10box3{
+        width: 100%;
+        height: auto;
+        min-height: 260px;
+    }
+    .content10box4{
+        width: 100%;
+        height: auto;
+        min-height: 260px;
     }
 } 
 @media screen and (max-width:670px){
@@ -1705,5 +2099,21 @@ h6{
     }
     .content9pic1 img{
         width: 100%;
+    }
+    .content10box1link1 p{
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .content10box2link1 p{
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .content10box3link1 p{
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .content10box4link1 p{
+        font-size: 24px;
+        line-height: 34px;
     }
 }

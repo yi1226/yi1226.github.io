@@ -1,0 +1,27 @@
+
+// background-color
+
+$bg_white:white;
+$bg_black:black;
+$bg_gray:gray;
+
+// mask
+$mask:rgba(255, 255, 255, 0.5);
+
+// font-size
+
+$title1:32px;
+$title2:24px;
+$text:18px;
+
+// font-color
+
+$color_gray:gray;
+$color_white:white;
+
+
+@mixin h1() {
+    font-size: $title1;
+    letter-spacing: 10px;
+    color:$color_white;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css">
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #fff;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .swiper-container {
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -150px;
+            margin-top: -150px;
+        }
+
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body>
+     <!-- Swiper -->
+  <div class="swiper-container">
+        <div class="swiper-wrapper">
+            
+          <a class="swiper-slide" href="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ezreal_21.jpg" style="background-image:url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ezreal_21.jpg') " data-lightbox="roadtrip"></a>
+          
+          <a class="swiper-slide" href="https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lucian_8.jpg" style="background-image:url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Lucian_8.jpg') " data-lightbox="roadtrip"></a>
+          <div class="swiper-slide" style="background-image:url('https://www.taiwan.net.tw/att/1/big_scenic_spots/pic_3266_19.jpg')"></div>
+          <div class="swiper-slide" style="background-image:url('https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Vayne_6.jpg')"></div>
+          <div class="swiper-slide" style="background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1HxzoauecLiE_uP6RuFpmlWCNcWRWghJRbI_a47ydJth9AlOK&s')"></div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+      </div>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+     <!-- Initialize Swiper -->
+  <script>
+        var swiper = new Swiper('.swiper-container', {
+          effect: 'cube',
+          grabCursor: true,
+          cubeEffect: {
+            shadow: true,
+            slideShadows: true,
+            shadowOffset: 20,
+            shadowScale: 0.94,
+          },
+          pagination: {
+            el: '.swiper-pagination',
+          },
+        });
+      </script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox-plus-jquery.min.js"></script>
+       <script>
+           lightbox.option({
+               'resizeDuration': 200,
+               'wrapAround': true,
+               'albumLabel': "league of lengends %1 of %2"
+           })
+       </script>
+</body>
+
+</html>

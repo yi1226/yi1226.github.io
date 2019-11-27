@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    font-size: 13px ;
+    height: 54px;
+    margin-bottom: 2px;
+    z-index: 502;
+}
+nav a{
+    padding: 16px 6px 16px 10px;
+    height: 100%;
+    margin-top: 1px;
+}
+nav a img{
+    max-width: none;
+    width: 108px;
+}
+.nav-link{
+    border: 1px solid transparent;
+    color: #262626;
+    display: inline-block;
+    margin-top: 1px;
+    padding: 16px 8px 10px;
+    height: 48px;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    position: relative;
+}
+.contenttext{
+    position: absolute;
+    top:calc(40%);
+    left: 50px;
+    z-index: 600;
+    text-align: left;
+}
+.contenttext h2{
+    padding: 2px 0px;   
+}
+.textp{
+    margin-top: 12px;
+}
+.contenttextlink{
+    margin-top: 12px;
+    padding: 12px 2px 0;
+}

@@ -104,9 +104,9 @@ nav a img{
 }
 .content2box{
     width: 88%;
-    height: 100%;
+    height: calc(100% - 48px);
     position: absolute;
-    top: 0;
+    top: 48px;
     bottom: 0;
     left: 0;
     right: 0;
@@ -119,7 +119,6 @@ nav a img{
 .content2text{
     display: flex;
     flex-direction: column;
-
 }
 .content2text h2{
     font-size: 24px;
@@ -137,7 +136,11 @@ nav a img{
     padding: 12px 2px 0px 2px;
 }
 .content2texta_1{
-    display: inline;
+    display: inline-block;
+    border: 2px;
+    padding: 10px 20px 6px 22px;
+    background-color:black;
+    color: white;
 }
 .text{
     padding-top:48px;
@@ -149,3 +152,109 @@ nav a img{
     line-height: 28px;
     font-weight: 600;
 }
+.container2{
+    margin-top: -32px;
+}
+.content3{
+    margin-top: 48px;
+}
+.content3text{
+    display: flex;
+}
+.content3textspan{
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(0,0,0,.6);
+    padding-right: 12px;
+    margin-bottom: 4px;
+}
+.content3text ul{
+    display: flex;
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+.content3text1{
+    display: inline-block;
+    margin-right:12px;
+    width: 32px;
+    height: 32px;
+    border:2px solid transparent;
+}
+.content3text1 img{
+    max-width: 100%;
+}
+.content3text2{
+    display: inline-block;
+    margin-right:12px;
+    width: 32px;
+    height: 32px;
+    border:2px solid transparent;
+}
+.content3text2 img{
+    max-width: 100%;
+}
+.footercontainer{
+    margin-top: 48px;
+    background: #f2f2f2;
+}
+.footer{
+    padding-right: 12px;
+    text-align: left;
+}
+.btncontent{
+    font-size: 15px;
+    line-height: 20px;
+    color: #616161;
+    padding: 36px 0px 4px 0px;
+}
+.footer ul{
+    list-style-type: none;
+    padding: 0px;
+}
+.footer li{
+    padding: 8px 0px;
+    font-size: 11px;
+    line-height: 16px;
+}
+.footer li a{
+    color: #616161;
+}
+.footerbtm{
+    background: #f2f2f2;
+    padding: 30px 62px 16px 62px;
+}
+.footerch{
+    display:flex;
+    justify-content: space-between;
+}
+.footerch img{
+    width: 20px;
+    height: 24px;;
+}
+.footerchbox a{
+    font-size: 11px;
+    line-height: 16px;
+    display: inline-block;
+    padding-right: 24px;
+    color: #616161;
+    white-space: nowrap;
+}
+.footerbtmlinkul{
+    display:flex;
+    list-style-type:none;
+    margin: 3px 0;
+}
+.footerbtmlinkul li{
+    font-size: 11px;
+    line-height: 16px;
+    padding: 0px 24px 4px 0px;
+    display: inline-block;
+}
+.footerbtmlinkul a{
+    color: #616161;
+    word-break: break-word;
+    text-decoration: none;
+}
+@media screen and (max-width:1024px) {

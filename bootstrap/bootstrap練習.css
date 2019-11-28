@@ -62,3 +62,90 @@ nav a img{
     margin-top: 12px;
     padding: 12px 2px 0;
 }
+.cardcontainer{
+    padding: 0px 12px;
+    text-align: start;
+}
+.card{
+    margin-top: 48px;
+    border: 0px;
+}
+.card-img-top{
+    width: 100%;
+}
+.card-body{
+    padding: 0px;
+}
+.card-title{
+    margin-top: 37px;
+    margin-bottom: 0px;
+    padding: 1px 12px 2px 0px;
+    font-weight: 600;
+}
+.cardp{
+    padding: 2px 12px 0px 0px;
+}
+.cardp p{
+    font-size: 15px;
+    font-family: 'Segoe UI',SegoeUI,'Microsoft JhengHei',微軟正黑體,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.btn-primary{
+    border: 2px;
+    border-color: white;
+    padding: 10px 3px 7px 0px;
+    background-color: white;
+    color: blue;
+}
+.content2{
+    padding-top:48px;
+}
+.containerimg{
+    width: 100%;
+}
+.content2box{
+    width: 88%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+.content2text{
+    display: flex;
+    flex-direction: column;
+
+}
+.content2text h2{
+    font-size: 24px;
+    padding: 2px 0px 3px 0px;
+    margin: 0px;
+}
+.content2textp{
+    margin-top: 12px;
+}
+.content2textp p{
+    margin: 0px;
+}
+.content2texta{
+    margin-top: 12px;
+    padding: 12px 2px 0px 2px;
+}
+.content2texta_1{
+    display: inline;
+}
+.text{
+    padding-top:48px;
+}
+.textcontent{
+    margin: 0px;
+    padding-bottom: 4px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+}

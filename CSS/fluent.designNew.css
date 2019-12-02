@@ -107,6 +107,9 @@ a{
 .burgers span{
     position: absolute;
     transition: all 200ms linear 0ms;
+    background-color: rgb(255, 255, 255);
+    width: 24px;
+    height: 2px;
 }
 .topbar{
     top: 17px;
@@ -1006,6 +1009,8 @@ h6{
 .content10box1link2R label{
     color: rgb(255, 255, 255);
     transition: color 200ms linear 0ms;
+    font-weight: 400;
+    font-size: 14px;
 }
 .content10box1 a:hover label {
     color: rgb(0, 0, 0);
@@ -1075,6 +1080,8 @@ h6{
 .content10box2link2 label{
     color: rgb(255, 255, 255);
     transition: color 200ms linear 0ms;
+    font-weight: 400;
+    font-size: 14px;
 }
 .content10box2 a:hover label{
     color: rgb(0, 0, 0);
@@ -1142,6 +1149,8 @@ h6{
 .content10box3 label{
     transition: color 200ms linear 0ms;
     color: rgb(0, 0, 0);
+    font-weight: 400;
+    font-size: 14px;
 }
 .content10box3 a:hover label{
     color: rgb(0, 0, 0);
@@ -1208,6 +1217,8 @@ h6{
 .content10box4link2R label{
     color: rgb(0, 0, 0);
     transition: color 200ms linear 0ms;
+    font-weight: 400;
+    font-size: 14px;
 }
 .content10box4 a:hover label{
     color: rgb(0, 0, 0);
@@ -1241,6 +1252,7 @@ h6{
     font-weight: 600;
     padding: 0px 0px 0px 16px;
     font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
+    margin: 0px;
 }
 .content11boxc2{
     flex: 1 1 auto;
@@ -1275,16 +1287,14 @@ h6{
 .content11boxc2btm img{
     margin: 0px 16px 0px 0px;
 }
-.content11boxc2btm span{
+.content11boxc2btm a span{
     font-size: 16px;
-    font-family: "Segoe UI Mono", mono;
-    letter-spacing: 0.01rem;
+    letter-spacing: 1.5px;
     line-height: 1;
-    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 }
 
 /* 第十一部份 */
-/* Main部分 */
+
 /* footer */
 
 .btmdiv{
@@ -1339,6 +1349,10 @@ h6{
     color: rgb(255, 255, 255);
     position: relative;
     text-decoration: none;
+    font-size: 12px;
+    line-height: 48px;
+    font-weight: 400;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", sans-serif;
 }
 .btmcontent3{
     display: flex;
@@ -1359,6 +1373,8 @@ h6{
 }
 /* footer */
 
+
+/* Main部分 */
 @media screen and (max-width:1940px) {
     .content8_2 img{
         max-width: 900px;

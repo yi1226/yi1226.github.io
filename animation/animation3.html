@@ -40,16 +40,31 @@
 
         /* 打白光 陰影部分更明顯 */
 
-        1px 1px 100px rgba(255, 255, 255, 0.5);
+        1px 1px 150px rgba(255, 255, 255, 0.5);
     }
     
     .animate-text::after{
         content: '☆＞~＜★';
         position: absolute;
-        text-shadow:0px 0px 100px lightblue;
+        text-shadow:0px 0px 100px rgba(173, 216, 230, 0.8);
+
+        animation: color 10s linear infinite;
     }
     
     
+    @keyframes color{
+        0%{
+            text-shadow:0px 0px 100px  rgba(173, 216, 230, 0.8);
+        }
+        15%{
+            text-shadow:0px 0px 100px rgb(124, 58, 231);
+        }
+        30%{}
+        50%{}
+        65%{}
+        80%{}
+        95%{}
+    }
     
     
     

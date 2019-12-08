@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+<style>
+.pic{
+    margin: 200px auto;
+    width: 300px;
+    height: 300px;
+}
+.pic img{
+    width: 100px;
+    height: 100px;
+    animation-name: transform;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+@keyframes transform {
+    0%{
+        transform: rotate(0deg) scale(0.5,0.5);
+        position: absolute;
+        top: 0%;
+    }
+    100%{
+        transform:rotate3D(1,1,1) scale(1,1);
+        position: absolute;
+        top: 100%;
+
+    }
+    0%{
+        transform: rotate(0deg) scale(0.5,0.5);
+        opacity: 0.3;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+    <div class="pic">
+        <img src="https://cdn.pixabay.com/photo/2012/04/25/00/38/basketball-41408_960_720.png" alt="">
+    </div>
+</body>
+</html>

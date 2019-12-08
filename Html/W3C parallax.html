@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>W3C parallax</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .index-banner {
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://live.staticflickr.com/1741/41689667405_f9636940ec_b.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .mask {
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(255, 255, 255, 0.603)
+        }
+
+        .banner-title {
+            background-color: red;
+            font-family: '標楷體';
+            padding: 20px;
+            position: relative;
+            left: calc(50% - 95px);
+            top: calc(50% - 35px);
+            letter-spacing: 10px;
+            font-size: 30px;
+            color: white;
+        }
+
+        .contant-banner {
+            width: 100%;
+            /* height: 300px; */
+            background-color: white;
+            padding: 40px;
+        }
+
+        .contant-title {
+            font-family: '標楷體';
+            padding: 30px;
+            position: relative;
+            left: calc(50% - 130px);
+            top: calc(50% - 35px);
+            letter-spacing: 10px;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .contant-text {
+            font-family: '標楷體';
+            padding: 30px;
+            letter-spacing: 2px;
+            font-size: 30px;
+            text-align: justify;
+        }
+
+        .contant2-banner {
+            width: 100%;
+            height: 300px;
+            background-image: url('https://live.staticflickr.com/8273/8709927466_b398900197_b.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .contant2-mask {
+            width: 100%;
+            height: 300px;
+            background-color: rgba(255, 255, 255, 0.603)
+        }
+
+        .contant2-title {
+            font-family: '標楷體';
+            padding: 20px;
+            position: relative;
+            left: calc(50% - 120px);
+            top: calc(50% - 25px);
+            letter-spacing: 10px;
+            font-size: 30px;
+            color: black;
+        }
+
+        .contant3-banner {
+            width: 100%;
+            height: 300px;
+            background-color: black;
+            padding: 70px;
+        }
+
+        .contant3-text {
+            font-family: '標楷體';
+            letter-spacing: 2px;
+            font-size: 30px;
+            text-align: left;
+            color: white;
+            position: relative;
+            top: calc(50% - 15px);
+        }
+
+        .contant4-banner {
+            width: 100%;
+            height: 300px;
+            background-image: url('https://live.staticflickr.com/7517/15961511638_b8a529bb31_b.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .contant4-mask {
+            width: 100%;
+            height: 300px;
+            background-color: rgba(255, 255, 255, 0.603)
+        }
+
+        .contant4-title {
+            font-family: '標楷體';
+            padding: 20px;
+            position: relative;
+            left: calc(50% - 95px);
+            top: calc(50% - 15px);
+            letter-spacing: 10px;
+            font-size: 30px;
+            color: black;
+        }
+
+        .contant5-banner {
+            width: 100%;
+            height: 300px;
+            background-color: black;
+            padding: 70px;
+        }
+
+        .contant5-text {
+            font-family: '標楷體';
+            letter-spacing: 2px;
+            font-size: 30px;
+            text-align: left;
+            color: white;
+            position: relative;
+            top: calc(50% - 15px);
+        }
+
+        .contant6-banner {
+            width: 100%;
+            height: 300px;
+            background-image: url('https://live.staticflickr.com/7252/7122170865_542995ccaf_b.jpg');
+            background-size: cover;
+            background-position: top;
+            background-attachment: fixed;
+        }
+
+        .contant6-mask {
+            width: 100%;
+            height: 300px;
+            background-color: rgba(255, 255, 255, 0.603)
+        }
+
+        .contant6-title {
+            font-family: '標楷體';
+            padding: 20px;
+            position: relative;
+            left: calc(50% - 158px);
+            top: calc(50% - 15px);
+            letter-spacing: 10px;
+            font-size: 30px;
+            color: black;
+        }
+
+        .contant7-banner {
+            width: 100%;
+            height: 300px;
+            background-color: black;
+            padding: 70px;
+        }
+
+        .contant7-text {
+            font-family: '標楷體';
+            letter-spacing: 2px;
+            font-size: 30px;
+            text-align: left;
+            color: white;
+            position: relative;
+            top: calc(50% - 15px);
+        }
+
+        .footer {
+            width: 100%;
+            height: 100vh;
+            background-image: url('https://farm8.staticflickr.com/7836/44638882430_23cd6ba955_b.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .footer-mask {
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(255, 255, 255, 0.603)
+        }
+
+        .footer-title {
+            font-family: '標楷體';
+            padding: 20px;
+            position: relative;
+            left: calc(50% - 220px);
+            top: calc(50% - 35px);
+            letter-spacing: 10px;
+            font-size: 30px;
+            color: black;
+        }
+    </style>
+
+
+
+
+
+
+</head>
+
+<body>
+    <div class="main">
+        <div class="index-banner">
+            <div class="mask">
+                <span class="banner-title">MARVEL</span>
+            </div>
+        </div>
+        <div class="contant-banner">
+            <span class="contant-title">Avengers</span>
+            <div class="contant-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellendus ad provident
+                nostrum animi quibusdam repellat minus. Modi maiores hic dolor molestiae veniam quia neque mollitia a
+                quaerat, ullam nesciunt at.
+            </div>
+        </div>
+        <div class="contant2-banner">
+            <div class="contant2-mask">
+                <span class="contant2-title">Iron Man</span>
+            </div>
+        </div>
+        <div class="contant3-banner">
+            <div class="contant3-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+        </div>
+        <div class="contant4-banner">
+            <div class="contant4-mask">
+                <span class="contant4-title">Vision</span>
+            </div>
+        </div>
+        <div class="contant5-banner">
+            <div class="contant5-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+        </div>
+        <div class="contant6-banner">
+            <div class="contant6-mask">
+                <span class="contant6-title">Black Widow</span>
+            </div>
+        </div>
+        <div class="contant7-banner">
+            <div class="contant7-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-mask">
+                <span class="footer-title">We miss them all</span>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+    <style>
+        html,
+        body {
+            position: relative;
+            height: 100%;
+        }
+
+        body {
+            background: #eee;
+            font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            color: #000;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            width: 100%;
+            height: 54px;
+            background-color: black;
+        }
+
+        .swiper-container {
+            width: 100%;
+            height: calc(100vh - 54px);
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+            /* Center slide text vertically */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .swiper-slide img{
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <NAV>
+        <div class="navbar">
+
+        </div>
+    </NAV>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="https://live.staticflickr.com/958/40918616695_7ab0c64960_b.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmkuOMOgZ8VSkkuPk_bLReTgFfAdtpgaAEdxJ2py9rogpSVYHp&s" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://live.staticflickr.com/5110/5640066276_428e17b56b_b.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://www.publicdomainpictures.net/pictures/220000/nahled/scenic-mountain-landscape.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTB3VM5zr5xchnrvCKB0H0oOlbPbV08srSKc_55qdS-5LJrMUzHbg&s" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqmBErBW6O2fKYyFRqFUipF3quAM9KngsMt6MtJBWT6-v2P_Twmw&s" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://live.staticflickr.com/5224/5639544879_c4c51f6897_b.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://live.staticflickr.com/5109/5639390841_3782b484d4_b.jpg" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQr0RYerSA4BeKezQw-1JFPjuZ1qj2JGmFum1cr5pBvwHl36HLFAg&s" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp-P1-7_RuOu6dFT7LZpB6NxGvLCMTxnOr57KQOVL2hmRtnVkIrw&s" alt="">
+            </div>
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+    </script>
+</body>
+
+</html>

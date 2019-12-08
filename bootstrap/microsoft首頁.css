@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    font-size: 13px ;
+    height: 54px;
+    margin-bottom: 2px;
+    z-index: 502;
+}
+nav a{
+    padding: 16px 6px 16px 10px;
+    height: 100%;
+    margin-top: 1px;
+}
+nav a img{
+    max-width: none;
+    width: 108px;
+}
+.nav-link{
+    border: 1px solid transparent;
+    color: #262626;
+    display: inline-block;
+    margin-top: 1px;
+    padding: 16px 8px 10px;
+    height: 48px;
+}
+.nav-item{
+    list-style-type: none;
+}
+.swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+.swiper-slide img{
+    width: 100%;
+    height: 100%;
+}
+.container{
+    position: relative;
+}
+.contenttext{
+    position: absolute;
+    top:calc(40%);
+    left: 50px;
+    z-index: 600;
+    text-align: left;
+}
+.contenttext h2{
+    padding: 2px 0px;   
+}
+.textp{
+    margin-top: 12px;
+}
+.contenttextlink{
+    margin-top: 12px;
+    padding: 12px 2px 0;
+}
+.cardcontainer{
+    padding: 0px 12px;
+    text-align: start;
+}
+.card{
+    margin-top: 48px;
+    border: 0px;
+}
+.card-img-top{
+    width: 100%;
+}
+.card-body{
+    padding: 0px;
+}
+.card-title{
+    margin-top: 37px;
+    margin-bottom: 0px;
+    padding: 1px 12px 2px 0px;
+    font-weight: 600;
+}
+.cardp{
+    padding: 2px 12px 0px 0px;
+}
+.cardp p{
+    font-size: 15px;
+    font-family: 'Segoe UI',SegoeUI,'Microsoft JhengHei',微軟正黑體,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.btn-primary{
+    border: 2px;
+    border-color: white;
+    padding: 10px 3px 7px 0px;
+    background-color: white;
+    color: blue;
+}
+.content2{
+    padding-top:48px;
+}
+.containerimg{
+    width: 100%;
+}
+.content2box{
+    width: 88%;
+    height: calc(100% - 48px);
+    position: absolute;
+    top: 48px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    padding: 0px;
+}
+.content2text{
+    display: flex;
+    flex-direction: column;
+}
+.content2text h2{
+    font-size: 24px;
+    padding: 2px 0px 3px 0px;
+    margin: 0px;
+}
+.content2textp{
+    margin-top: 12px;
+}
+.content2textp p{
+    margin: 0px;
+}
+.content2texta{
+    margin-top: 12px;
+    padding: 12px 2px 0px 2px;
+}
+.content2texta_1{
+    display: inline-block;
+    border: 2px;
+    padding: 10px 20px 6px 22px;
+    background-color:black;
+    color: white;
+}
+.text{
+    padding-top:48px;
+}
+.textcontent{
+    margin: 0px;
+    padding-bottom: 4px;
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 600;
+}
+.container2{
+    margin-top: -32px;
+}
+.content3{
+    margin-top: 48px;
+}
+.content3text{
+    display: flex;
+}
+.content3textspan{
+    font-size: 15px;
+    line-height: 20px;
+    color: rgba(0,0,0,.6);
+    padding-right: 12px;
+    margin-bottom: 4px;
+}
+.content3text ul{
+    display: flex;
+    list-style-type: none;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0;
+}
+.content3text1{
+    display: inline-block;
+    margin-right:12px;
+    width: 32px;
+    height: 32px;
+    border:2px solid transparent;
+}
+.content3text1 img{
+    max-width: 100%;
+}
+.content3text2{
+    display: inline-block;
+    margin-right:12px;
+    width: 32px;
+    height: 32px;
+    border:2px solid transparent;
+}
+.content3text2 img{
+    max-width: 100%;
+}
+.footercontainer{
+    margin-top: 48px;
+    background: #f2f2f2;
+}
+.footer{
+    padding-right: 12px;
+    text-align: left;
+}
+.btncontent{
+    font-size: 15px;
+    line-height: 20px;
+    color: #616161;
+    padding: 36px 0px 4px 0px;
+}
+.footer ul{
+    list-style-type: none;
+    padding: 0px;
+}
+.footer li{
+    padding: 8px 0px;
+    font-size: 11px;
+    line-height: 16px;
+}
+.footer li a{
+    color: #616161;
+}
+.footerbtm{
+    background: #f2f2f2;
+    padding: 30px 62px 16px 62px;
+}
+.footerch{
+    display:flex;
+    justify-content: space-between;
+}
+.footerch img{
+    width: 20px;
+    height: 24px;;
+}
+.footerchbox a{
+    font-size: 11px;
+    line-height: 16px;
+    display: inline-block;
+    padding-right: 24px;
+    color: #616161;
+    white-space: nowrap;
+}
+.footerbtmlinkul{
+    display:flex;
+    list-style-type:none;
+    margin: 3px 0;
+}
+.footerbtmlinkul li{
+    font-size: 11px;
+    line-height: 16px;
+    padding: 0px 24px 4px 0px;
+    display: inline-block;
+}
+.footerbtmlinkul a{
+    color: #616161;
+    word-break: break-word;
+    text-decoration: none;
+}
+@media screen and (max-width:1024px) {}

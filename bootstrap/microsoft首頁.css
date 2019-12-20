@@ -260,4 +260,66 @@ nav a img{
     word-break: break-word;
     text-decoration: none;
 }
-@media screen and (max-width:1024px) {}
+@media screen and (max-width:990px) {
+
+    .contenttext{
+        position: absolute;
+        top:calc(30%);
+        left: 50px;
+        z-index: 600;
+        text-align: left;
+    }
+    .contenttext h2{
+        font-size: 18px;  
+    }
+    .textp{
+        width:200px;
+        font-size: 14px; 
+    }
+
+}
+
+@media screen and (max-width:990px) {
+
+    .contenttext{
+        position: absolute;
+        top:calc(20%);
+        left: 50px;
+        z-index: 600;
+        text-align: left;
+    }
+    .swiper-slide.contenttextlink{
+        margin:0px;
+    }
+
+}
+
+@media screen and (max-width:575px) {
+
+    .swiper-slide{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contenttext{
+        position: static;
+        width: 100%;
+        text-align: center;
+        background-color: lightgray ;
+    }
+    .textp{
+        margin: 0px auto;
+    }
+    .textp p{
+        margin: 0px auto;
+    }
+    .contenttextlink{
+        margin: 0 auto;
+        padding: 0;
+    }
+    .swiper-slide{
+        bottom: 20px;
+    }
+
+
+}

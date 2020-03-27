@@ -99,7 +99,7 @@
             $(this).addClass("active"); 
             var index = $(".link_tab").index(this);
             $(".tab_container").removeClass("active");
-            $(`.tab_container:nth-child(${index})`).addClass("active"); 
+            $(`.tab_container:nth-child(${index+1})`).addClass("active"); 
         });
     </script>
 </body>

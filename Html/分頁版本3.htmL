@@ -96,36 +96,11 @@
     <script>
         $(".link_tab").click(function(){
             $(".link_tab").removeClass("active");
-            $(this).addclass("active"); 
-            $(".link_tab").index(this);
+            $(this).addClass("active"); 
+            var index = $(".link_tab").index(this);
             $(".tab_container").removeClass("active");
-            $(`.tab_container:nth-child(${index})`).addclass("active"); 
-        })
-
-        // var link_tab_btn = document.querySelectorAll('.link_tab');
-        // var tab_container_btn = document.querySelectorAll('.tab_container');
-
-
-        // for (let index = 0; index < link_tab_btn.length; index++) {
-        //     const link_array = link_tab_btn[index];
-
-        //     link_array.onclick = function () {
-        //         remove_active();
-        //         link_array.classList.add('active');
-        //         tab_container_btn[index].classList.add('active');
-        //     }
-
-        // }
-        // function remove_active() {
-        //     for (const link_array of link_tab_btn) {
-        //         link_array.classList.remove('active');
-        //     }
-        //     tab_container_btn.forEach(tab_container => {
-        //         tab_container.classList.remove('active');
-        //     });
-        // }
-
-
+            $(`.tab_container:nth-child(${index})`).addClass("active"); 
+        });
     </script>
 </body>
 

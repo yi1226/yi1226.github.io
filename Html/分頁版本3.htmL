@@ -95,10 +95,17 @@
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script>
         $(".link_tab").click(function(){
+            //拿掉所有人的active
             $(".link_tab").removeClass("active");
+
+            //加上自己按鈕的 active
             $(this).addClass("active"); 
+
+            //找到是第幾個 
             var index = $(".link_tab").index(this);
+            
             $(".tab_container").removeClass("active");
+            //加上自己內容的 active
             $(`.tab_container:nth-child(${index+1})`).addClass("active"); 
         });
     </script>

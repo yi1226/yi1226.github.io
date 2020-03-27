@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/CSS/分頁+篩選3.css">
+</head>
+
+<body>
+    <div class="filter">
+        <a class="all current" href="#">All</a>
+        <a class="one" href="#">one</a>
+        <a class="two" href="#">two</a>
+        <a class="three" href="#">three</a>
+    </div>
+
+
+    <div class="boxGroup">
+        <div class="box one"></div>
+        <div class="box two"></div>
+        <div class="box three"></div>
+        <div class="box two"></div>
+        <div class="box one"></div>
+        <div class="box three"></div>
+        <div class="box one"></div>
+        <div class="box three"></div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script>
+        $(function () {
+
+            var $filter = $('.filter');
+            var $tab = $('.filter a');
+            var $offers = $('.boxGroup .box')
+
+
+
+            $filter.on('click touch', '.all', function (e) {
+                e.preventDefault();
+                $tab.removeClass('current');
+                $(this).addClass('current');
+
+                $offers.hide();
+                $offers.fadeIn(300);
+
+            });
+
+
+            $filter.on('click touch', '.one', function (e) {
+                e.preventDefault();
+                $tab.removeClass('current');
+                $(this).addClass('current');
+
+                $offers.show();
+                $offers.fadeOut(100);
+                $offers.filter('.one').fadeIn(100);
+
+            });
+
+
+
+            $filter.on('click touch', '.two', function (e) {
+                e.preventDefault();
+                $tab.removeClass('current');
+                $(this).addClass('current');
+
+                $offers.show();
+                $offers.fadeOut(100);
+                $offers.filter('.two').fadeIn(100);
+
+            });
+
+
+
+            $filter.on('click touch', '.three', function (e) {
+                e.preventDefault();
+                $tab.removeClass('current');
+                $(this).addClass('current');
+
+                $offers.show();
+                $offers.fadeOut(100);
+                $offers.filter('.three').fadeIn(100);
+
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

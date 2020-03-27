@@ -1,0 +1,42 @@
+body {
+    background: yellowgreen;
+  }
+  
+  .filter { 
+    text-align: center; 
+      margin: 2em auto;
+  }
+  
+  .filter a {
+    text-align: center;
+    padding: .7em 1em;
+    background: crimson;
+    color: white;
+    text-decoration: none;
+  }
+  
+  .filter a.current { background: orangered; }
+  
+  
+  
+  .boxGroup {
+    text-align:center;
+  }
+  
+  .boxGroup div {
+    width:250px;
+    height:250px;
+    display: inline-block;
+  }
+  
+  .one {
+    background-color: #6CA1FF;
+  }
+  
+  .two {
+      background-color: rgb(100, 237, 180);  
+  }
+  
+  .three {
+      background-color: rgb(238, 62, 171); 
+  }

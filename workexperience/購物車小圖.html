@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .showbox {
+            width: 700px;
+            height: 460px;
+            border: 2px solid #1dd;
+            vertical-align: middle;
+        }
+
+        .abgne-block-20120106 {
+            margin-top: 10px;
+            width: 680px;
+            overflow: hidden;
+        }
+
+        .abgne-block-20120106 a {
+            margin-right: 10px;
+        }
+
+        .abgne-block-20120106 a img {
+            width: 140px;
+            height: 92px;
+            border: 2px solid #1dd;
+            vertical-align: middle;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="showbox"><img id="show-image" src="/Lighthouse.jpg" /></div>
+    <p>
+        分隔用....
+    </p>
+    <div class="abgne-block-20120106">
+        <a href="/Koala.jpg"><img src="/Koala.jpg" title="" /></a>
+        <a href="/Lighthouse.jpg"><img src="/Lighthouse.jpg" title="" /></a>
+        <a href="/Koala.jpg"><img src="/Koala.jpg" title="" /></a>
+        <a href="/Lighthouse.jpg"><img src="/Lighthouse.jpg" title="" /></a>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            // 用來顯示大圖片用
+            var $showImage = $('#show-image');
+
+            // 當滑鼠移到 .abgne-block-20120106 中的某一個超連結時
+            $('.abgne-block-20120106 a').mouseover(function () {
+                // 把 #show-image 的 src 改成被移到的超連結的位置
+                $showImage.attr('src', $(this).attr('href'));
+            }).click(function () {
+                // 如果超連結被點擊時, 取消連結動作
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

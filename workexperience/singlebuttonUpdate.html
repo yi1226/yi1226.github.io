@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="all">
+        <div class="bnt">
+            <input type="button" value="click me1">
+            <div class="text">
+                <button>1</button>
+            </div>
+        </div>
+        <div class="bnt">
+            <input type="button" value="click me2">
+            <div class="text">
+                <button>2</button>
+            </div>
+        </div>
+        <div class="bnt">
+            <input type="button" value="click me3">
+            <div class="text">
+                <button>3</button>
+            </div>
+        </div>
+        <div class="bnt">
+            <input type="button" value="click me4">
+            <div class="text">
+                <button>4</button>
+            </div>
+        </div>
+        <div class="bnt">
+            <input type="button" value="click me5">
+            <div class="text">
+                <button>5</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <script>
+        var oall = document.querySelector('.all');
+        var bnts = oall.querySelectorAll('input');
+        var texts = oall.querySelectorAll('.text');
+        var btns = oall.querySelectorAll('button');
+        bnts.forEach((bnts, aa) => {
+            const text = texts[aa];
+            const btn = btns[aa];
+            bnts.onclick = function () {
+                if (text.style.display == 'none') {
+                    text.style.display = 'block';
+                    bnts.style.display = 'none';
+                } else {
+                    text.style.display = 'none';
+                }
+            }
+            btn.onclick = function (){
+                if(bnts.style.display == 'none'){
+                    bnts.style.display = 'block';
+                    text.style.display = 'none';
+                }else{
+                    bnts.style.display = 'none';
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

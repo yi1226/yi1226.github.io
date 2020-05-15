@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            width: 820px;
+            height: 100px;
+            overflow: hidden;
+        }
+/* 
+        #container.rotate90,
+        #container.rotate270 {
+            width: 100px;
+            height: 820px
+        } */
+
+        #image {
+            transform-origin: top left;
+            /* IE 10+, Firefox, etc. */
+            -webkit-transform-origin: top left;
+            /* Chrome */
+            -ms-transform-origin: top left;
+            /* IE 9 */
+        }
+
+        #container.rotate90 #image {
+            transform: rotate(90deg) translateY(-100%);
+        }
+
+        #container.rotate180 #image {
+            transform: rotate(180deg) translate(-100%, -100%);
+        }
+
+        #container.rotate270 #image {
+            transform: rotate(270deg) translateX(-100%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- <div class="container">
+        <img id="image" src="/Img/arrow-black.svg" alt="">
+        <button id="button">change</button>
+    </div> -->
+    <button id="button">Click me!</button>
+    <div id="container">
+        <img src="/Img/arrow-black.svg" id="image" />
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        // function turn() {
+
+        //     $('#button').on('click', function () {
+        //         $('#img').css('transform', 'translateX(90deg)');
+        //     });
+
+        // };
+        // console.log(turn());
+
+        // turn();
+
+        // var angle = 0;
+        // $('#button').on('click', function () {
+        //     angle += 90;
+        //     $("#image").rotate(angle);
+        // });
+
+        var angle = 0;
+        img = document.getElementById('container');
+        document.getElementById('button').onclick = function () {
+            angle = (angle + 90) % 360;
+            img.className = "rotate" + angle;
+        }
+    </script>
+</body>
+
+</html>

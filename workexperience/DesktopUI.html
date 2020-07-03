@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/CSS/DesktopUI.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="navcontainer">
+            <div class="selection">
+                <div class="desktop">&nbsp;</div>
+                <div class="menulist">
+                    <img src="/Img/SynologyUI/menu.svg" alt="">
+                </div>
+                <button class="navapp">
+                    <img src="/Img/SynologyUI/folder.svg" alt="">
+                </button>
+            </div>
+            <div class="features">
+                <hr>
+                <div class="message">
+                    <a href="#">
+                        <img src="/Img/SynologyUI/message.svg" alt="">
+                    </a>
+                </div>
+                <div class="information">
+                    <a href="#">
+                        <img src="/Img/SynologyUI/user.svg" alt="">
+                    </a>
+                </div>
+                <div class="searchbar">
+                    <a href="#">
+                        <img src="/Img/SynologyUI/search.svg" alt="">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="navcontent">
+            <div class="serachBarcontent">
+                <input type="text">
+                <button type="button">
+                    <img src="/Img/SynologyUI/smallwindow/search.svg" alt="">
+                </button>
+            </div>
+            <div class="loginarea">
+                <h1>Welcome</h1>
+                <div class="loginsuccess">
+                    <div class="username">
+                        <label for="user">Username</label>
+                        <input type="text" id="user">
+                    </div>
+                    <div class="passwordcontainer">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" data-type="password">
+                    </div>
+                    <div class="remember">
+                        <span>Remember Me</span>
+                        <div class="toggle-button-cover">
+                            <div class="button-cover">
+                                <div class="button buttonYN" id="buttonYN">
+                                    <input type="checkbox" class="checkbox">
+                                    <div class="knobs">
+                                        <span></span>
+                                    </div>
+                                    <div class="layer"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="Signin">Login</button>
+                    <hr>
+                    <a href="#" class="forget">Forget Password ?</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="modal">
+        <div class="modalmask">
+            <div class="app" id="app3">
+                <img src="/Img/SynologyUI/folder.svg" alt="">
+                <span>新增資料夾３</span>
+            </div>
+            <div class="app" id="app4">
+                <img src="/Img/SynologyUI/folder.svg" alt="">
+                <span>新增資料夾４</span>
+            </div>
+            <div class="app" id="app5">
+                <img src="/Img/SynologyUI/folder.svg" alt="">
+                <span>新增資料夾５</span>
+            </div>
+        </div>
+    </div>
+    <section class="appcontainer" id="appcontainer">
+        <div class="stealth">
+            <div class="app" id="app">
+                <img src="/Img/SynologyUI/folder.svg" alt="">
+                <span>新增資料夾</span>
+            </div>
+
+            <div class="app" id="app2">
+                <img src="/Img/SynologyUI/folder.svg" alt="">
+                <span>新增資料夾２
+                </span>
+            </div>
+        </div>
+    </section>
+    <section class="filescontainer" id="filescontainer">
+        <div class="filesnav">
+            <div class="leftcontent">
+                <img src="/Img/SynologyUI/folderblack.svg" alt="">
+            </div>
+            <div class="midcontent">
+                <span>新增資料夾</span>
+            </div>
+            <div class="rightcontent">
+                <button type="button" class="narrowwindow">－</button>
+                <button type="button" class="enlargewindow">口</button>
+                <button type="button" class="closewindow">Ｘ</button>
+            </div>
+        </div>
+        <div class="filescontent">
+            <div class="filesleft">
+                <div class="search">
+                    <input type="text">
+                    <button type="button">
+                        <img src="/Img/SynologyUI/smallwindow/search.svg" alt="">
+                    </button>
+                </div>
+                <div class="tabarea">
+                    <a href="#accordion1" aria-expanded="false" aria-controls="accordion1" class="areatab">
+                        <img src="/Img/SynologyUI/smallwindow/right-chevron.svg" class="areaicon" alt="">
+                        <span>Type1</span>
+                    </a>
+                    <div class="tabareacontent is-collapsed collapsedcontrol" id="accordion1" aria-hidden="true">
+                        <div class="areacontent">Type1-1</div>
+                        <div class="areacontent">Type1-2</div>
+                        <div class="areacontent">Type1-3</div>
+                    </div>
+
+                    <a href="#accordion2" aria-expanded="false" aria-controls="accordion2" class="areatab">
+                        <img src="/Img/SynologyUI/smallwindow/right-chevron.svg" class="areaicon" alt="">
+                        <span>Type2</span>
+                    </a>
+                    <div class="tabareacontent is-collapsed collapsedcontrol" id="accordion2" aria-hidden="true">
+                        <div class="areacontent">Type2-1</div>
+                        <div class="areacontent">Type2-2</div>
+                        <div class="areacontent">Type2-3</div>
+                    </div>
+
+                    <a href="#accordion3" aria-expanded="false" aria-controls="accordion3" class="areatab">
+                        <img src="/Img/SynologyUI/smallwindow/right-chevron.svg" class="areaicon" alt="">
+                        <span>Type3</span>
+                    </a>
+                    <div class="tabareacontent is-collapsed collapsedcontrol" id="accordion3" aria-hidden="true">
+                        <div class="areacontent">Type3-1</div>
+                        <div class="areacontent">Type3-2</div>
+                        <div class="areacontent">Type3-3</div>
+                    </div>
+                </div>
+            </div>
+            <div class="filesright">
+                <div class="tablinks">
+                    <div class="tablink active">Tablink1</div>
+                    <div class="tablink">Tablink2</div>
+                    <div class="tablink">Tablink3</div>
+                </div>
+                <div class="tabcontents">
+                    <div class="tabcontent active">This is Tabcontent1.</div>
+                    <div class="tabcontent">This is Tabcontent2.</div>
+                    <div class="tabcontent">This is Tabcontent3.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="/JS/Synology.js"></script>
+</body>
+
+</html>

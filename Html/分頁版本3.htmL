@@ -103,10 +103,13 @@
             
             //找到是第幾個 
             var index = $(".link_tab").index(this);
+            console.log(index);
             
             $(".tab_container").removeClass("active");
             //加上自己內容的 active
             $(`.tab_container:nth-child(${index+1})`).addClass("active"); 
+            console.log($(`.tab_container:nth-child(${index+1})`));
+            
         });
     </script>
 </body>

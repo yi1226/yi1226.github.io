@@ -1,0 +1,625 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+body nav {
+  width: 100%;
+  height: 80px;
+  background-color: #1a1a1a;
+}
+
+body nav .navcontainer {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body nav .navcontainer .selection {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+body nav .navcontainer .selection .desktop {
+  height: 80px;
+  width: 20px;
+  background-color: lightgray;
+}
+
+body nav .navcontainer .selection img {
+  width: 80px;
+  height: 80px;
+}
+
+body nav .navcontainer .selection .menulist {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+body nav .navcontainer .selection .menulist::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 70px;
+  top: calc(50% - 35px);
+  right: 0;
+  background-color: white;
+}
+
+body nav .navcontainer .selection .navapp {
+  width: 80px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  display: none;
+}
+
+body nav .navcontainer .selection .navapp img {
+  width: 100%;
+  height: 100%;
+}
+
+body nav .navcontainer .features {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+body nav .navcontainer .features a {
+  padding: 0 10px;
+}
+
+body nav .navcontainer .features .message img {
+  width: 60px;
+  height: 100%;
+}
+
+body nav .navcontainer .features .information img {
+  width: 60px;
+  height: 80px;
+}
+
+body nav .navcontainer .features .searchbar img {
+  width: 60px;
+  height: 100%;
+}
+
+body nav .navcontent {
+  position: absolute;
+  top: 80px;
+  right: 0px;
+  padding-right: 10px;
+}
+
+body nav .navcontent .serachBarcontent {
+  position: absolute;
+  right: 10px;
+  background-color: rgba(173, 216, 230, 0.5);
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: -1;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateY(-40%);
+          transform: translateY(-40%);
+}
+
+body nav .navcontent .serachBarcontent input {
+  height: 20px;
+  margin-left: 5px;
+}
+
+body nav .navcontent .serachBarcontent button {
+  margin: 0 5px;
+  height: 80%;
+  width: 50px;
+  padding: 0;
+}
+
+body nav .navcontent .serachBarcontent button img {
+  height: 100%;
+  width: 50px;
+}
+
+body nav .navcontent .loginarea {
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+  padding: 0 20px 20px 20px;
+  background-color: rgba(173, 216, 230, 0.5);
+  position: absolute;
+  right: 10px;
+  text-align: center;
+  color: white;
+}
+
+body nav .navcontent .loginarea h1 {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+body nav .navcontent .loginarea.success h1 {
+  -webkit-transform: translateY(85px);
+          transform: translateY(85px);
+}
+
+body nav .navcontent .loginarea .loginsuccess .username {
+  text-align: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body nav .navcontent .loginarea .loginsuccess .passwordcontainer {
+  text-align: start;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body nav .navcontent .loginarea .loginsuccess .remember {
+  margin-top: 10px;
+  text-align: start;
+  position: relative;
+}
+
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover {
+  position: absolute;
+  top: 0;
+  left: -20px;
+}
+
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover {
+  margin: 20px;
+  border-radius: 4px;
+}
+
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover::before {
+  content: "";
+  color: #d7e3e3;
+  font-size: 12px;
+  line-height: 1;
+  padding: 5px;
+}
+
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover .button {
+  position: relative;
+  top: 50%;
+  width: 74px;
+  height: 36px;
+  margin: -20px auto 0 auto;
+  overflow: hidden;
+}
+
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover .button .checkbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover .button .knobs {
+  z-index: 2;
+}
+
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover .button .layer {
+  width: 100%;
+  background-color: #ebf7fc;
+  -webkit-transition: 0.3s ease all;
+  transition: 0.3s ease all;
+  z-index: 1;
+}
+
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN {
+  overflow: visible;
+}
+
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN .knobs {
+  -webkit-perspective: 70px;
+          perspective: 70px;
+}
+
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN .knobs::before, body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN .knobs::after {
+  position: absolute;
+  top: 4px;
+  border-radius: 2px;
+  width: 20px;
+  height: 10px;
+  color: #4e4e4e;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+  padding: 9px 4px;
+}
+
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN .knobs::before {
+  content: 'YES';
+  left: 4px;
+}
+
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN .knobs::after {
+  content: 'NO';
+  right: 4px;
+}
+
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN .knobs span {
+  position: absolute;
+  top: 4px;
+  border-radius: 2px;
+  right: 4px;
+  width: 33px;
+  height: 28px;
+  background-color: #03a9f4;
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+  -webkit-transform-origin: 0% 50%;
+          transform-origin: 0% 50%;
+  -webkit-transition: 0.6s ease all;
+  transition: 0.6s ease all;
+  z-index: 1;
+}
+
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN .checkbox:checked + .knobs span {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+  background-color: #f44336;
+}
+
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN .checkbox:checked ~ .layer {
+  background-color: #fcebeb;
+}
+
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover,
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .knobs,
+body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+body nav .navcontent .loginarea .loginsuccess .Signin {
+  margin-top: 50px;
+}
+
+body nav .navcontent .loginarea .loginsuccess .forget {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+
+body nav .navcontent .loginarea .loginsuccess .forget:hover {
+  color: goldenrod;
+}
+
+body .modal {
+  visibility: hidden;
+}
+
+body .modal .modalmask {
+  position: fixed;
+  top: 80px;
+  left: 0px;
+  height: calc(100vh - 80px);
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background: gray;
+  opacity: 0.85;
+  filter: alpha(opacity=85);
+  -moz-opacity: 0.85;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .modal .modalmask .app {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100px;
+  height: 80px;
+  margin: 30px;
+}
+
+body .modal .modalmask .app img {
+  width: 80px;
+}
+
+body .modal .modalmask .app span {
+  color: #3CCDEF;
+}
+
+body .modal.active {
+  visibility: visible;
+}
+
+body .appcontainer {
+  height: calc(100vh - 80px);
+  width: 100%;
+  background-color: black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body .appcontainer .stealth {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  padding-top: 10px;
+  padding-left: 2%;
+}
+
+body .appcontainer .stealth .app {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100px;
+  height: 80px;
+  margin-bottom: 30px;
+}
+
+body .appcontainer .stealth .app img {
+  width: 80px;
+  height: 80px;
+}
+
+body .appcontainer .stealth .app span {
+  color: #3CCDEF;
+}
+
+body .filescontainer {
+  width: 800px;
+  height: 600px;
+  min-width: 800px;
+  min-height: 600px;
+  margin: auto;
+  border: 5px solid rgba(128, 127, 127, 0.3);
+  border-radius: 10px;
+  background-color: white;
+  position: absolute;
+  top: calc(50% - 300px);
+  left: calc(50% - 400px);
+  display: none;
+}
+
+body .filescontainer .filesnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  border-bottom: 0.5px solid black;
+  background-color: skyblue;
+}
+
+body .filescontainer .filesnav .leftcontent img {
+  height: 25px;
+}
+
+body .filescontainer .filescontent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: calc(100% - 40px);
+}
+
+body .filescontainer .filescontent .filesleft {
+  width: 350px;
+  border-right: 1px solid gray;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+body .filescontainer .filescontent .filesleft .search {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+body .filescontainer .filescontent .filesleft .search input {
+  width: auto;
+}
+
+body .filescontainer .filescontent .filesleft .search button {
+  height: 20px;
+}
+
+body .filescontainer .filescontent .filesleft .search button img {
+  height: 15px;
+}
+
+body .filescontainer .filescontent .filesleft .tabarea {
+  height: auto;
+  width: 100%;
+  border-right: 1px solid black;
+}
+
+body .filescontainer .filescontent .filesleft .tabarea img {
+  height: 20px;
+  margin-right: 10px;
+}
+
+body .filescontainer .filescontent .filesleft .tabarea .areatab {
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1px solid black;
+  text-decoration: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+body .filescontainer .filescontent .filesleft .tabarea .tabareacontent {
+  text-align: start;
+  height: auto;
+  overflow: hidden;
+  max-height: 50em;
+}
+
+body .filescontainer .filescontent .filesleft .tabarea .tabareacontent .areacontent {
+  margin: 5px 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+body .filescontainer .filescontent .filesleft .tabarea .tabareacontent .areacontent:hover {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  cursor: pointer;
+}
+
+body .filescontainer .filescontent .filesleft .tabarea .tabareacontent .areacontent::before {
+  content: "－";
+  padding-left: 20px;
+}
+
+body .filescontainer .filescontent .filesleft .tabarea .tabareacontent.is-collapsed {
+  max-height: 0;
+}
+
+body .filescontainer .filescontent .filesleft .tabarea .no-js .tabareacontent.is-collapsed {
+  max-height: auto;
+}
+
+body .filescontainer .filescontent .filesright {
+  width: 100%;
+  height: 100%;
+}
+
+body .filescontainer .filescontent .filesright .tablinks {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-bottom: 1px solid black;
+}
+
+body .filescontainer .filescontent .filesright .tablinks .tablink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px;
+  border-width: 1px 1px 0px 1px;
+  border-color: black;
+  border-style: solid;
+  border-radius: 10px 10px 0 0;
+  margin: 0 10px;
+  height: 30px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+body .filescontainer .filescontent .filesright .tablinks .tablink.active {
+  background-color: black;
+  color: white;
+}
+
+body .filescontainer .filescontent .filesright .tabcontents {
+  width: 100%;
+  height: calc(100% - 100px);
+}
+
+body .filescontainer .filescontent .filesright .tabcontents .tabcontent {
+  width: 100%;
+  height: 0px;
+  opacity: 0;
+  pointer-events: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: 0.3s opacity;
+  transition: 0.3s opacity;
+  overflow: hidden;
+  background-color: black;
+  color: white;
+}
+
+body .filescontainer .filescontent .filesright .tabcontents .tabcontent.active {
+  height: 100%;
+  opacity: 1;
+  pointer-events: all;
+}
+/*# sourceMappingURL=DesktopUI.css.map */

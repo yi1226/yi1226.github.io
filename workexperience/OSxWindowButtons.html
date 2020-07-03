@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body,
+        html {
+            background-color: #11aaff;
+            height: 100%;
+            position: relative;
+            margin: 0;
+        }
+
+        .window {
+            width: 98%;
+            max-width: 500px;
+            height: 300px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 50%;
+            margin: 0 auto;
+            transform: perspective(1px) translateY(-50%);
+            border-radius: 4px;
+            position: relative;
+            -moz-transition: all .5s;
+            -ms-transition: all .5s;
+            -o-transition: all .5s;
+            -webkit-transition: all .5s;
+            transition: all .5s ease-in-out;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .navbar {
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+            padding: 15px 0 15px 15px;
+            background-color: #03a762;
+            box-shadow: 1px 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .nav-btn {
+            border-radius: 50%;
+            border: none;
+            height: 17px;
+            width: 17px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+        }
+
+        #close {
+            background-color: #f45b69;
+            position: relative;
+        }
+
+        .navbar:hover #close::before {
+            content: 'x';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: 12px;
+        }
+
+        #minimize {
+            background-color: #f4ff52;
+            position: relative;
+        }
+
+        .navbar:hover #minimize::before {
+            content: '_';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            font-size: 12px;
+        }
+
+        #fullscreen {
+            background-color: #6EEB83;
+            position: relative;
+        }
+
+        .navbar:hover #fullscreen::before {
+            content: '\2194';
+            position: absolute;
+            top: 2px;
+            bottom: 0;
+            left: 1px;
+            right: 0;
+            font-size: 11px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="window" id="window1">
+        <div class="navbar">
+            <button class="nav-btn" id="close"></button>
+            <button class="nav-btn" id="minimize"></button>
+            <button class="nav-btn" id="fullscreen"></button>
+        </div>
+    </div>
+
+    <script>
+        /*
+         *
+         * Close the window if the red btn is clicked (refresh after)
+         *
+         * Minimize the window if the yellow btn is clicked:
+         * 	_ change height and width
+         *		_ move to top left corner
+         *
+         * Reset height, width and position when the minimized window is clicked
+         *
+         * Enter and exit fullscreen if the green btn is clicked
+         *
+         * The window is 'draggable', but dragging it  will (sometimes) prevent it to reset to its original position after minimization -- TODO
+         *
+         */
+
+        var navBtns = document.getElementsByClassName('nav-btn'),
+            window1 = document.getElementById('window1'),
+            isMinimized = false,
+            isFullscreen = false;
+
+        for (var i = 0; i < navBtns.length; i++) {
+            navBtns[i].addEventListener('click', function () {
+
+                if (this.id === 'close') {
+                    window1.style.display = 'none';
+                } else if (this.id === 'minimize') {
+                    minimizeWindow(window1);
+                } else {
+                    enterFullscreen();
+                }
+            });
+        }
+
+        /* Reset window to default values*/
+        // 畫面縮小後再點擊的畫面
+        window1.addEventListener('click', function () {
+            if (isMinimized) {
+                window1.style.webkitTransform = "translateY(-50%) translateX(0px)";
+                window1.style.height = '300px';
+                window1.style.width = '98%';
+
+                for (x = 0; x < navBtns.length; x++) {
+                    navBtns[x].style.display = 'inline-block';
+                }
+
+                window1.style.cursor = 'initial';
+                isMinimized = false;
+            }
+        });
+
+
+        /* Minimize the window */
+        function minimizeWindow(element) {
+            // resize the element
+            element.style.height = '30px';
+            element.style.width = '40px';
+
+            // hide the btns
+            for (x = 0; x < navBtns.length; x++) {
+                navBtns[x].style.display = 'none';
+            }
+            //u
+            setTimeout(() => {
+                // current top and left positions
+                var currentPosition = getOffset(element);
+                var distanceTop = currentPosition.top - 10,
+                    distanceLeft = currentPosition.left - 10;
+                element.style.webkitTransform = "translateY(-" + distanceTop + "px) translateX(-" +
+                    distanceLeft + "px)";
+
+                element.style.cursor = 'pointer';
+                isMinimized = true;
+            }, 750);
+        }
+
+        /* Get the coordinates of an element */
+        function getOffset(el) {
+            const rect = el.getBoundingClientRect();
+            return {
+                left: rect.left + window.scrollX,
+                top: rect.top + window.scrollY
+            };
+        }
+
+        /* Enter fullscreen mode */
+        function enterFullscreen() {
+            if (!isFullscreen) {
+                window1.style.webkitTransform = 'perspective(0px) translateY(0px)';
+                window1.style.top = 0;
+                window1.style.left = 0;
+                window1.style.minWidth = '100%';
+                window1.style.height = '100%';
+
+                isFullscreen = true;
+            } else {
+                window1.style.top = '50%';
+                window1.style.webkitTransform = 'perspective(1px) translateY(-50%)';
+                window1.style.minWidth = 'auto';
+                window1.style.height = '300px';
+
+                isFullscreen = false;
+            }
+
+        }
+
+        /* Bedited from: https://stackoverflow.com/a/9334106 */
+
+        window.onload = addListeners();
+
+        function addListeners() {
+            window1.addEventListener('mousedown', mouseDown, false);
+            window.addEventListener('mouseup', mouseUp, false);
+        }
+
+        function mouseUp() {
+            window.removeEventListener('mousemove', divMove, true);
+        }
+
+        function mouseDown(e) {
+            window.addEventListener('mousemove', divMove, true);
+        }
+
+        function divMove(e) {
+            var div = window1;
+            div.style.position = 'absolute';
+            window1.style.webkitTransform = 'perspective(0px) translateY(0px)';
+            div.style.top = e.clientY + 'px';
+            div.style.left = e.clientX + 'px';
+        }
+    </script>
+</body>
+
+</html>

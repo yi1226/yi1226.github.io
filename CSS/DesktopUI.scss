@@ -1,0 +1,552 @@
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    nav {
+        width: 100%;
+        height: 80px;
+        background-color: darken($color: #1a1a1a, $amount: 0);
+
+        .navcontainer {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            .selection {
+                display: flex;
+                height: 100%;
+
+                .desktop {
+                    height: 80px;
+                    width: 20px;
+                    background-color: lightgray;
+                }
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                .menulist {
+                    display: flex;
+                    position: relative;
+                }
+
+                .menulist::after {
+                    position: absolute;
+                    content: "";
+                    width: 2px;
+                    height: 70px;
+                    top: calc(50% - 35px);
+                    right: 0;
+                    background-color: white;
+                }
+
+                .navapp {
+                    width: 80px;
+                    height: 100%;
+                    background-color: rgba(255, 255, 255, 0.2);
+                    ;
+                    display: none;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .features {
+                display: flex;
+                height: 100%;
+
+                a {
+                    padding: 0 10px;
+                }
+
+                .message {
+                    img {
+                        width: 60px;
+                        height: 100%;
+                    }
+                }
+
+                .information {
+                    img {
+                        width: 60px;
+                        height: 80px;
+                    }
+                }
+
+                .searchbar {
+                    img {
+                        width: 60px;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+
+        .navcontent {
+            position: absolute;
+            top: 80px;
+            right: 0px;
+            padding-right: 10px;
+
+            .serachBarcontent {
+                position: absolute;
+                right: 10px;
+                background-color: rgba(173, 216, 230, 0.5);
+                height: 30px;
+                display: flex;
+                align-items: center;
+                z-index: -1;
+                transition: 1s;
+                transform: translateY(-40%);
+
+                input {
+                    height: 20px;
+                    margin-left: 5px;
+                }
+
+                button {
+                    margin: 0 5px;
+                    height: 80%;
+                    width: 50px;
+                    padding: 0;
+
+                    img {
+                        height: 100%;
+                        width: 50px;
+                    }
+                }
+            }
+
+            .loginarea {
+                opacity: 0;
+                pointer-events: none;
+                transition: .5s;
+                padding: 0 20px 20px 20px;
+                background-color: rgba(173, 216, 230, 0.5);
+                position: absolute;
+                right: 10px;
+                text-align: center;
+                color: white;
+                h1{
+                    transition-duration: 1s;
+                    transition-timing-function: ease-in;
+                }
+                &.success{
+                    h1{
+                        transform: translateY(85px);
+                    }
+                }
+                .loginsuccess {
+
+                    .username {
+                        text-align: start;
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .passwordcontainer {
+                        text-align: start;
+                        margin-top: 10px;
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .remember {
+                        margin-top: 10px;
+                        text-align: start;
+                        position: relative;
+
+                        .toggle-button-cover {
+                            position: absolute;
+                            top: 0;
+                            left: -20px;
+
+                            .button-cover {
+                                margin: 20px;
+                                border-radius: 4px;
+
+                                &::before {
+                                    content: "";
+                                    color: #d7e3e3;
+                                    font-size: 12px;
+                                    line-height: 1;
+                                    padding: 5px;
+                                }
+
+                                .button {
+                                    position: relative;
+                                    top: 50%;
+                                    width: 74px;
+                                    height: 36px;
+                                    margin: -20px auto 0 auto;
+                                    overflow: hidden;
+
+                                    .checkbox {
+                                        position: relative;
+                                        width: 100%;
+                                        height: 100%;
+                                        padding: 0;
+                                        margin: 0;
+                                        opacity: 0;
+                                        cursor: pointer;
+                                        z-index: 3;
+                                    }
+
+                                    .knobs {
+                                        z-index: 2;
+                                    }
+
+                                    .layer {
+                                        width: 100%;
+                                        background-color: #ebf7fc;
+                                        transition: 0.3s ease all;
+                                        z-index: 1;
+                                    }
+                                }
+
+                                #buttonYN {
+                                    overflow: visible;
+
+                                    .knobs {
+                                        perspective: 70px;
+
+                                        &::before,
+                                        &::after {
+                                            position: absolute;
+                                            top: 4px;
+                                            border-radius: 2px;
+                                            width: 20px;
+                                            height: 10px;
+                                            color: #4e4e4e;
+                                            font-size: 10px;
+                                            font-weight: bold;
+                                            text-align: center;
+                                            line-height: 1;
+                                            padding: 9px 4px;
+                                        }
+
+                                        &::before {
+                                            content: 'YES';
+                                            left: 4px;
+                                        }
+
+                                        &::after {
+                                            content: 'NO';
+                                            right: 4px;
+                                        }
+
+                                        span {
+                                            position: absolute;
+                                            top: 4px;
+                                            border-radius: 2px;
+                                            right: 4px;
+                                            width: 33px;
+                                            height: 28px;
+                                            background-color: #03a9f4;
+                                            transform: rotateY(0);
+                                            transform-origin: 0% 50%;
+                                            transition: 0.6s ease all;
+                                            z-index: 1;
+                                        }
+                                    }
+                                }
+
+                                #buttonYN .checkbox:checked+.knobs span {
+                                    transform: rotateY(-180deg);
+                                    background-color: #f44336;
+                                }
+
+                                #buttonYN .checkbox:checked~.layer {
+                                    background-color: #fcebeb;
+                                }
+                            }
+
+                            .button-cover,
+                            .knobs,
+                            .layer {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                            }
+                        }
+
+
+                    }
+
+                    .Signin {
+                        margin-top: 50px;
+                    }
+
+                    .forget {
+                        color: rgba(255, 255, 255, 0.6);
+                        text-decoration: none;
+
+                        &:hover {
+                            color: goldenrod;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    .modal {
+        visibility: hidden;
+
+        .modalmask {
+            position: fixed;
+            top: 80px;
+            left: 0px;
+            height: calc(100vh - 80px);
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            background: gray;
+            opacity: 0.85;
+            filter: alpha(opacity=85);
+            -moz-opacity: 0.85;
+            display: flex;
+            justify-content: center;
+
+            .app {
+                // position: absolute;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                width: 100px;
+                height: 80px;
+                margin: 30px;
+
+                img {
+                    width: 80px;
+                }
+
+                span {
+                    color: #3CCDEF;
+                }
+            }
+        }
+
+        &.active {
+            visibility: visible;
+        }
+    }
+
+    .appcontainer {
+        height: calc(100vh - 80px);
+        width: 100%;
+        background-color: darken($color: #000000, $amount: 0);
+        box-sizing: border-box;
+
+        .stealth {
+            box-sizing: border-box;
+            height: 100%;
+            width: 100%;
+            padding-top: 10px;
+            padding-left: 2%;
+
+            .app {
+                // position: absolute;
+                cursor: pointer;
+                display: flex;
+                flex-direction: column;
+                width: 100px;
+                height: 80px;
+                margin-bottom: 30px;
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                }
+
+                span {
+                    color: #3CCDEF;
+                }
+            }
+        }
+    }
+
+    .filescontainer {
+        width: 800px;
+        height: 600px;
+        min-width: 800px;
+        min-height: 600px;
+        margin: auto;
+        border: 5px solid rgba(128, 127, 127, 0.3);
+        border-radius: 10px;
+        background-color: white;
+        position: absolute;
+        top: calc(50% - 300px);
+        left: calc(50% - 400px);
+        display: none;
+
+        .filesnav {
+            display: flex;
+            height: 30px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            border-bottom: 0.5px solid black;
+            background-color: skyblue;
+
+            .leftcontent {
+                img {
+                    height: 25px;
+                }
+            }
+        }
+
+        .filescontent {
+            display: flex;
+            width: 100%;
+            height: calc(100% - 40px);
+
+            .filesleft {
+                width: 350px;
+                border-right: 1px solid gray;
+                overflow-y: scroll;
+                overflow-x: hidden;
+
+                .search {
+                    width: 100%;
+                    height: 50px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-right: 1px solid black;
+                    border-bottom: 1px solid black;
+
+                    input {
+                        width: auto;
+                    }
+
+                    button {
+                        height: 20px;
+
+                        img {
+                            height: 15px;
+                        }
+                    }
+                }
+
+                .tabarea {
+                    height: auto;
+                    width: 100%;
+                    border-right: 1px solid black;
+
+                    img {
+                        height: 20px;
+                        margin-right: 10px;
+                    }
+
+                    .areatab {
+                        height: 30px;
+                        display: flex;
+                        padding-left: 10px;
+                        align-items: center;
+                        border-bottom: 1px solid black;
+                        text-decoration: none;
+                        transition: .5s;
+                    }
+
+                    .tabareacontent {
+                        text-align: start;
+                        height: auto;
+                        overflow: hidden;
+                        max-height: 50em;
+
+                        .areacontent {
+                            margin: 5px 0;
+                            transition: .5s;
+                        }
+
+                        .areacontent:hover {
+                            transform: translateX(10px);
+                            cursor: pointer;
+                        }
+
+                        .areacontent::before {
+                            content: "－";
+                            padding-left: 20px;
+                        }
+                    }
+
+                    .tabareacontent.is-collapsed {
+                        max-height: 0;
+                    }
+
+                    .no-js .tabareacontent.is-collapsed {
+                        max-height: auto;
+                    }
+                }
+            }
+
+            .filesright {
+                width: 100%;
+                height: 100%;
+
+                .tablinks {
+                    width: 100%;
+                    height: 100px;
+                    display: flex;
+                    align-items: flex-end;
+                    border-bottom: 1px solid black;
+
+                    .tablink {
+                        display: flex;
+                        align-items: center;
+                        padding: 10px;
+                        border-width: 1px 1px 0px 1px;
+                        border-color: black;
+                        border-style: solid;
+                        border-radius: 10px 10px 0 0;
+                        margin: 0 10px;
+                        height: 30px;
+                        background-color: white;
+                        color: black;
+                        cursor: pointer;
+                    }
+
+                    .tablink.active {
+                        background-color: black;
+                        color: white;
+                    }
+                }
+
+                .tabcontents {
+                    width: 100%;
+                    height: calc(100% - 100px);
+
+                    .tabcontent {
+                        width: 100%;
+                        height: 0px;
+                        opacity: 0;
+                        pointer-events: none;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: 0.3s opacity;
+                        overflow: hidden;
+                        background-color: black;
+                        color: white;
+                    }
+
+                    .tabcontent.active {
+                        height: 100%;
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+                }
+            }
+        }
+    }
+}

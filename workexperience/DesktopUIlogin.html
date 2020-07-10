@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login In</title>
+    <link rel="stylesheet" href="/CSS/DesktopUIlogin.css">
+</head>
+
+<body>
+    <div class="timer">
+        <div class="time">
+            <h1 class="timetext"></h1>
+        </div>
+        <hr>
+        <div class="date">
+            <p class="datetext"></p>
+        </div>
+    </div>
+    <div class="loginarea">
+        <h1>Welcome</h1>
+        <div class="loginsuccess">
+            <div class="username">
+                <label for="user">Username</label>
+                <input type="text" id="user">
+            </div>
+            <div class="passwordcontainer">
+                <label for="password">Password</label>
+                <input type="password" id="password" data-type="password">
+            </div>
+            <div class="remember">
+                <span>Remember Me</span>
+                <div class="toggle-button-cover">
+                    <div class="button-cover">
+                        <div class="button buttonYN" id="buttonYN">
+                            <input type="checkbox" class="checkbox">
+                            <div class="knobs">
+                                <span></span>
+                            </div>
+                            <div class="layer"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="Signin">Login</button>
+            <hr>
+            <a href="#" class="forget">Forget Password ?</a>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="/JS/DesktopUIlogin.js"></script>
+</body>
+
+</html>

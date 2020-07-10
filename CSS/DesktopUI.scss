@@ -2,11 +2,13 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
+    max-width: 100%;
+    max-height: 100vh;
 
     nav {
         width: 100%;
         height: 80px;
-        background-color: darken($color: #1a1a1a, $amount: 0);
+        background-color: darken($color: #cecece, $amount: 0);
 
         .navcontainer {
             height: 100%;
@@ -23,14 +25,24 @@ body {
                     background-color: lightgray;
                 }
 
-                img {
-                    width: 80px;
+                .fa-folder-open {
                     height: 80px;
+                    width: 80px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 60px;
                 }
-
                 .menulist {
                     display: flex;
                     position: relative;
+                    .fa-th-large{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        font-size: 60px;
+                        margin-right: 20px;
+                    }
                 }
 
                 .menulist::after {
@@ -46,14 +58,42 @@ body {
                 .navapp {
                     width: 80px;
                     height: 100%;
-                    background-color: rgba(255, 255, 255, 0.2);
+                    background-color: rgba(255, 255, 255, 0.4);
                     ;
                     display: none;
+                }
 
-                    img {
-                        width: 100%;
-                        height: 100%;
+                .navfiles {
+                    width: 80px;
+                    height: 100%;
+                    background-color: rgba(255, 255, 255, 0.4);
+                    ;
+                    display: none;
+                }
+
+                .navoption {
+                    width: 80px;
+                    height: 100%;
+                    background-color: rgba(255, 255, 255, 0.4);
+                    ;
+                    display: none;
+                    padding: 0px;
+                    .fa-cogs {      
+                        height: 80px;
+                        width: 80px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 50px;
                     }
+                }
+
+                .navmember {
+                    width: 80px;
+                    height: 100%;
+                    background-color: rgba(255, 255, 255, 0.4);
+                    ;
+                    display: none;
                 }
             }
 
@@ -62,27 +102,31 @@ body {
                 height: 100%;
 
                 a {
+                    text-decoration: none;
                     padding: 0 10px;
                 }
 
                 .message {
-                    img {
-                        width: 60px;
-                        height: 100%;
+                    display: flex;
+                    align-items: center;
+                    .fa-comment-dots{
+                        font-size: 60px;
                     }
                 }
 
                 .information {
-                    img {
-                        width: 60px;
-                        height: 80px;
+                    display: flex;
+                    align-items: center;
+                    .fa-user{
+                        font-size: 60px;
                     }
                 }
 
                 .searchbar {
-                    img {
-                        width: 60px;
-                        height: 100%;
+                    display: flex;
+                    align-items: center;
+                    .fa-search{
+                        font-size: 60px;
                     }
                 }
             }
@@ -93,6 +137,7 @@ body {
             top: 80px;
             right: 0px;
             padding-right: 10px;
+            pointer-events: none;
 
             .serachBarcontent {
                 position: absolute;
@@ -124,179 +169,130 @@ body {
             }
 
             .loginarea {
-                opacity: 0;
-                pointer-events: none;
+                pointer-events: all;
+                display: none;
                 transition: .5s;
                 padding: 0 20px 20px 20px;
                 background-color: rgba(173, 216, 230, 0.5);
                 position: absolute;
-                right: 10px;
+                right: 45px;
                 text-align: center;
                 color: white;
-                h1{
+
+                h1 {
                     transition-duration: 1s;
                     transition-timing-function: ease-in;
                 }
-                &.success{
-                    h1{
-                        transform: translateY(85px);
-                    }
-                }
+
                 .loginsuccess {
-
-                    .username {
-                        text-align: start;
-                        display: flex;
-                        flex-direction: column;
-                    }
-
-                    .passwordcontainer {
-                        text-align: start;
-                        margin-top: 10px;
-                        display: flex;
-                        flex-direction: column;
-                    }
-
-                    .remember {
-                        margin-top: 10px;
-                        text-align: start;
-                        position: relative;
-
-                        .toggle-button-cover {
-                            position: absolute;
-                            top: 0;
-                            left: -20px;
-
-                            .button-cover {
-                                margin: 20px;
-                                border-radius: 4px;
-
-                                &::before {
-                                    content: "";
-                                    color: #d7e3e3;
-                                    font-size: 12px;
-                                    line-height: 1;
-                                    padding: 5px;
-                                }
-
-                                .button {
-                                    position: relative;
-                                    top: 50%;
-                                    width: 74px;
-                                    height: 36px;
-                                    margin: -20px auto 0 auto;
-                                    overflow: hidden;
-
-                                    .checkbox {
-                                        position: relative;
-                                        width: 100%;
-                                        height: 100%;
-                                        padding: 0;
-                                        margin: 0;
-                                        opacity: 0;
-                                        cursor: pointer;
-                                        z-index: 3;
-                                    }
-
-                                    .knobs {
-                                        z-index: 2;
-                                    }
-
-                                    .layer {
-                                        width: 100%;
-                                        background-color: #ebf7fc;
-                                        transition: 0.3s ease all;
-                                        z-index: 1;
-                                    }
-                                }
-
-                                #buttonYN {
-                                    overflow: visible;
-
-                                    .knobs {
-                                        perspective: 70px;
-
-                                        &::before,
-                                        &::after {
-                                            position: absolute;
-                                            top: 4px;
-                                            border-radius: 2px;
-                                            width: 20px;
-                                            height: 10px;
-                                            color: #4e4e4e;
-                                            font-size: 10px;
-                                            font-weight: bold;
-                                            text-align: center;
-                                            line-height: 1;
-                                            padding: 9px 4px;
-                                        }
-
-                                        &::before {
-                                            content: 'YES';
-                                            left: 4px;
-                                        }
-
-                                        &::after {
-                                            content: 'NO';
-                                            right: 4px;
-                                        }
-
-                                        span {
-                                            position: absolute;
-                                            top: 4px;
-                                            border-radius: 2px;
-                                            right: 4px;
-                                            width: 33px;
-                                            height: 28px;
-                                            background-color: #03a9f4;
-                                            transform: rotateY(0);
-                                            transform-origin: 0% 50%;
-                                            transition: 0.6s ease all;
-                                            z-index: 1;
-                                        }
-                                    }
-                                }
-
-                                #buttonYN .checkbox:checked+.knobs span {
-                                    transform: rotateY(-180deg);
-                                    background-color: #f44336;
-                                }
-
-                                #buttonYN .checkbox:checked~.layer {
-                                    background-color: #fcebeb;
-                                }
-                            }
-
-                            .button-cover,
-                            .knobs,
-                            .layer {
-                                position: absolute;
-                                top: 0;
-                                right: 0;
-                                bottom: 0;
-                                left: 0;
-                            }
-                        }
-
-
-                    }
-
-                    .Signin {
-                        margin-top: 50px;
-                    }
-
-                    .forget {
-                        color: rgba(255, 255, 255, 0.6);
+                    .option {
+                        padding: 5px 0;
                         text-decoration: none;
+                        color: white;
+                        cursor: pointer;
+                        transition: .5s;
+                        border-bottom: 1px solid lightgray;
 
                         &:hover {
-                            color: goldenrod;
+                            background-color: rgba(58, 193, 238, 0.5);
                         }
+                    }
+
+                    .logout {
+                        cursor: pointer;
+                        padding: 5px 0;
+                        transition: .5s;
+
+                        &:hover {
+                            background-color: rgba(58, 193, 238, 0.5);
+                        }
+                    }
+
+                }
+            }
+
+            .msgContainer {
+                width: 350px;
+                color: white;
+                padding: 0 10px;
+                background-color: gray;
+                max-height: calc(100vh - 80px);
+                overflow-y: auto;
+
+                opacity: 0;
+                pointer-events: none;
+                transition: .5s;
+
+                &::-webkit-scrollbar {
+                    width: 10px;
+                    margin-left: 5px;
+                }
+
+                /* Track */
+                &::-webkit-scrollbar-track {
+                    background: #f1f1f1;
+                }
+
+                /* Handle */
+                &::-webkit-scrollbar-thumb {
+                    background: rgb(103, 201, 214);
+                }
+
+                /* Handle on hover */
+                &::-webkit-scrollbar-thumb:hover {
+                    background: rgb(21, 184, 206);
+                }
+
+                h2 {
+                    padding-top: 10px;
+                    margin: 0;
+                    text-align: center;
+                }
+
+                .msgContent {
+                    .msgText {
+                        position: relative;
+
+                        img {
+                            position: absolute;
+                            right: 0;
+                            top: 0;
+                            width: 20px;
+                        }
+
+                        h4 {
+                            margin: 10px 0;
+                        }
+
+                        .msgtextcontetnt {
+                            height: auto;
+                            overflow: hidden;
+                            max-height: 50em;
+
+                            .msgtextdetail {
+                                p:nth-child(1) {
+                                    margin: 0;
+                                }
+
+                                p:nth-child(2) {
+                                    margin-top: 5px;
+                                    text-align: justify;
+                                }
+                            }
+                        }
+
+                        .msgtextcontetnt.is-collapsed {
+                            max-height: 0;
+                        }
+
+                        .no-js .msgtextcontetnt.is-collapsed {
+                            max-height: auto;
+                        }
+
                     }
                 }
             }
         }
-
     }
 
     .modal {
@@ -316,12 +312,13 @@ body {
             -moz-opacity: 0.85;
             display: flex;
             justify-content: center;
+            z-index: 5;
 
             .app {
-                // position: absolute;
                 cursor: pointer;
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 width: 100px;
                 height: 80px;
                 margin: 30px;
@@ -329,9 +326,16 @@ body {
                 img {
                     width: 80px;
                 }
+                
+                .fa-folder-open{
+                    font-size: 80px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
 
                 span {
-                    color: #3CCDEF;
+                    text-align: center;
                 }
             }
         }
@@ -344,8 +348,12 @@ body {
     .appcontainer {
         height: calc(100vh - 80px);
         width: 100%;
-        background-color: darken($color: #000000, $amount: 0);
+        background-color: darken($color: #ffffff, $amount: 0);
         box-sizing: border-box;
+
+        &.active {
+            background-color: red;
+        }
 
         .stealth {
             box-sizing: border-box;
@@ -355,21 +363,26 @@ body {
             padding-left: 2%;
 
             .app {
-                // position: absolute;
                 cursor: pointer;
                 display: flex;
                 flex-direction: column;
+                align-items: center;
                 width: 100px;
                 height: 80px;
                 margin-bottom: 30px;
-
+                .fa-folder-open{
+                    font-size: 80px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
                 img {
                     width: 80px;
                     height: 80px;
                 }
 
                 span {
-                    color: #3CCDEF;
+                    text-align: center;
                 }
             }
         }
@@ -399,6 +412,9 @@ body {
             background-color: skyblue;
 
             .leftcontent {
+                .fa-folder-open{
+                    font-size: 20px;
+                }
                 img {
                     height: 25px;
                 }
@@ -544,6 +560,183 @@ body {
                         height: 100%;
                         opacity: 1;
                         pointer-events: all;
+                    }
+                }
+            }
+        }
+    }
+
+    .emptyfiles {
+        width: 800px;
+        height: 600px;
+        min-width: 800px;
+        min-height: 600px;
+        margin: auto;
+        border: 5px solid rgba(128, 127, 127, 0.3);
+        border-radius: 10px;
+        background-color: white;
+        position: absolute;
+        top: calc(50% - 300px);
+        left: calc(50% - 400px);
+        display: none;
+
+        .filesnav {
+            display: flex;
+            height: 30px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            border-bottom: 0.5px solid black;
+            background-color: skyblue;
+
+            .leftcontent {
+                .fa-folder-open{
+                    font-size:20px
+                }
+            }
+        }
+    }
+
+    .optioncontainer {
+        width: 800px;
+        height: 600px;
+        min-width: 800px;
+        min-height: 600px;
+        margin: 0 auto;
+        border: 5px solid rgba(128, 127, 127, 0.3);
+        border-radius: 10px;
+        background-color: white;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        position: absolute;
+        top: calc(50% - 300px);
+        left: calc(50% - 400px);
+
+        .optionheader {
+            display: flex;
+            height: 30px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            border-bottom: 0.5px solid black;
+            background-color: skyblue;
+
+            img {
+                height: 30px;
+            }
+        }
+
+        .optioncontent {
+            margin-top: 30px;
+            margin-left: 30px;
+
+            input {
+                font-size: 22px;
+            }
+
+            label {
+                display: flex;
+                align-items: center;
+                width: 200px;
+                font-size: 22px;
+            }
+
+            .name {
+                display: flex;
+                padding: 10px;
+            }
+
+            .password {
+                display: flex;
+                padding: 10px;
+            }
+
+            .Newpassword {
+                display: flex;
+                padding: 10px;
+            }
+
+            .Cnewpassword {
+                display: flex;
+                padding: 10px;
+            }
+        }
+
+        .btmbtn {
+            padding-bottom: 10px;
+
+            .btns {
+                padding-right: 10px;
+                text-align: end;
+
+                button {
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+
+    .memberlist {
+        width: 800px;
+        height: 600px;
+        min-width: 800px;
+        min-height: 600px;
+        margin: 0 auto;
+        border: 5px solid rgba(128, 127, 127, 0.3);
+        border-radius: 10px;
+        background-color: white;
+        display: none;
+        flex-direction: column;
+        justify-content: space-between;
+        position: relative;
+        position: absolute;
+        top: calc(50% - 300px);
+        left: calc(50% - 400px);
+
+        .listnav {
+            display: flex;
+            height: 30px;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            border-bottom: 0.5px solid black;
+            background-color: skyblue;
+            .leftcontent{
+                .fa-folder-open{
+                    font-size:20px
+                }
+            }
+            img {
+                height: 30px;
+            }
+        }
+
+        .membercontainer {
+            .memberbtns {
+                display: flex;
+
+                button {
+                    width: 25%;
+                }
+            }
+
+            .membercontent {
+                .memberdetail {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-bottom: 1px solid black;
+
+                    .sorttd {
+                        width: 25%;
+                        text-align: center;
+                        border-right: 1px solid black;
+                    }
+
+                    .sorttd:nth-child(1) {
+                        border-left: 1px solid black;
                     }
                 }
             }

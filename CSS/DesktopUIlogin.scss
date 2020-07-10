@@ -1,0 +1,202 @@
+body {
+    background-color: darken($color: #000000, $amount: 0);
+    margin: 0 ;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    .timer{
+        position: absolute;
+        top:20%;
+        left: 5%;
+        color: white;
+        .time{
+            h1{
+                font-size: 72px;
+                margin-bottom: 0;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        .date{
+            p{
+                font-size: 32px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+    .loginarea {
+        width: 200px;
+        transition: .5s;
+        padding: 0 20px 20px 20px;
+        background-color: rgba(173, 216, 230, 0.5);
+        text-align: center;
+        color: white;
+
+        h1 {
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+        }
+
+        &.success {
+            h1 {
+                transform: translateY(85px);
+            }
+        }
+
+        .loginsuccess {
+
+            .username {
+                text-align: start;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .passwordcontainer {
+                text-align: start;
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+            }
+
+            .remember {
+                margin-top: 10px;
+                text-align: start;
+                position: relative;
+
+                .toggle-button-cover {
+                    position: absolute;
+                    top: 0;
+                    left: -20px;
+
+                    .button-cover {
+                        margin: 20px;
+                        border-radius: 4px;
+
+                        &::before {
+                            content: "";
+                            color: #d7e3e3;
+                            font-size: 12px;
+                            line-height: 1;
+                            padding: 5px;
+                        }
+
+                        .button {
+                            position: relative;
+                            top: 50%;
+                            width: 74px;
+                            height: 36px;
+                            margin: -20px auto 0 auto;
+                            overflow: hidden;
+
+                            .checkbox {
+                                position: relative;
+                                width: 100%;
+                                height: 100%;
+                                padding: 0;
+                                margin: 0;
+                                opacity: 0;
+                                cursor: pointer;
+                                z-index: 3;
+                            }
+
+                            .knobs {
+                                z-index: 2;
+                            }
+
+                            .layer {
+                                width: 100%;
+                                background-color: #ebf7fc;
+                                transition: 0.3s ease all;
+                                z-index: 1;
+                            }
+                        }
+
+                        #buttonYN {
+                            overflow: visible;
+
+                            .knobs {
+                                perspective: 70px;
+
+                                &::before,
+                                &::after {
+                                    position: absolute;
+                                    top: 4px;
+                                    border-radius: 2px;
+                                    width: 20px;
+                                    height: 10px;
+                                    color: #4e4e4e;
+                                    font-size: 10px;
+                                    font-weight: bold;
+                                    text-align: center;
+                                    line-height: 1;
+                                    padding: 9px 4px;
+                                }
+
+                                &::before {
+                                    content: 'YES';
+                                    left: 4px;
+                                }
+
+                                &::after {
+                                    content: 'NO';
+                                    right: 4px;
+                                }
+
+                                span {
+                                    position: absolute;
+                                    top: 4px;
+                                    border-radius: 2px;
+                                    right: 4px;
+                                    width: 33px;
+                                    height: 28px;
+                                    background-color: #03a9f4;
+                                    transform: rotateY(0);
+                                    transform-origin: 0% 50%;
+                                    transition: 0.6s ease all;
+                                    z-index: 1;
+                                }
+                            }
+                        }
+
+                        #buttonYN .checkbox:checked+.knobs span {
+                            transform: rotateY(-180deg);
+                            background-color: #f44336;
+                        }
+
+                        #buttonYN .checkbox:checked~.layer {
+                            background-color: #fcebeb;
+                        }
+                    }
+
+                    .button-cover,
+                    .knobs,
+                    .layer {
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+            }
+
+            .Signin {
+                margin-top: 50px;
+            }
+
+            .forget {
+                color: rgba(255, 255, 255, 0.6);
+                text-decoration: none;
+
+                &:hover {
+                    color: goldenrod;
+                }
+            }
+        }
+    }
+}

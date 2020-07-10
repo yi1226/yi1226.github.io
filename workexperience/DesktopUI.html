@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="/CSS/DesktopUI.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
     <link rel="stylesheet" href="http://jqueryui.com/resources/demos/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css"
+        integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
 </head>
 
 <body>
@@ -16,27 +18,36 @@
             <div class="selection">
                 <div class="desktop">&nbsp;</div>
                 <div class="menulist">
-                    <img src="/Img/SynologyUI/menu.svg" alt="">
+                    <i class="fas fa-th-large"></i>
                 </div>
                 <button class="navapp">
-                    <img src="/Img/SynologyUI/folder.svg" alt="">
+                    <i class="far fa-folder-open"></i>
+                </button>
+                <button class="navfiles">
+                    <i class="far fa-folder-open"></i>
+                </button>
+                <button class="navoption">
+                    <i class="fas fa-cogs"></i>
+                </button>
+                <button class="navmember">
+                    <i class="far fa-folder-open"></i>
                 </button>
             </div>
             <div class="features">
                 <hr>
                 <div class="message">
                     <a href="#">
-                        <img src="/Img/SynologyUI/message.svg" alt="">
+                        <i class="far fa-comment-dots"></i>
                     </a>
                 </div>
                 <div class="information">
                     <a href="#">
-                        <img src="/Img/SynologyUI/user.svg" alt="">
+                        <i class="far fa-user"></i>
                     </a>
                 </div>
                 <div class="searchbar">
                     <a href="#">
-                        <img src="/Img/SynologyUI/search.svg" alt="">
+                        <i class="fas fa-search"></i>
                     </a>
                 </div>
             </div>
@@ -50,33 +61,50 @@
                 </button>
             </div>
             <div class="loginarea">
-                <h1>Welcome</h1>
+                <h1>Name001</h1>
                 <div class="loginsuccess">
-                    <div class="username">
-                        <label for="user">Username</label>
-                        <input type="text" id="user">
-                    </div>
-                    <div class="passwordcontainer">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" data-type="password">
-                    </div>
-                    <div class="remember">
-                        <span>Remember Me</span>
-                        <div class="toggle-button-cover">
-                            <div class="button-cover">
-                                <div class="button buttonYN" id="buttonYN">
-                                    <input type="checkbox" class="checkbox">
-                                    <div class="knobs">
-                                        <span></span>
-                                    </div>
-                                    <div class="layer"></div>
-                                </div>
+                    <div class="option">Option</div>
+                    <div class="logout">Logout</div>
+                </div>
+            </div>
+            <div class="msgContainer">
+                <h2>訊息</h2>
+                <hr>
+                <div class="msgContent">
+                    <div class="msgText">
+                        <h4>系統</h4>
+                        <div class="msgtextcontent">
+                            <div class="msgtextdetail">
+                                <p>2020-07-06 15:32</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo autem aut molestiae vel
+                                    adipisci nostrum.</p>
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="Signin">Login</button>
-                    <hr>
-                    <a href="#" class="forget">Forget Password ?</a>
+                    <div class="msgText">
+                        <h4>系統(3)</h4>
+                        <a href="#content" class="arrowlink" aria-expanded="false" aria-controls="content">
+                            <img src="/Img/SynologyUI/down.svg" class="arrow" alt="">
+                        </a>
+
+                        <div class="msgtextdetail">
+                            <p>2020-07-03 15:31</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sapiente ipsa
+                                laudantium quisquam quia omnis et dolorum eaque, ut voluptate?</p>
+                        </div>
+                        <div class="msgtextcontetnt is-collapsed" id="content" aria-hidden="true">
+                            <div class="msgtextdetail">
+                                <p>2020-07-06 15:57</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sapiente ipsa
+                                    laudantium quisquam quia omnis et dolorum eaque, ut voluptate?</p>
+                            </div>
+                            <div class="msgtextdetail">
+                                <p>2020-07-06 16:04</p>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti sapiente ipsa
+                                    laudantium quisquam quia omnis et dolorum eaque, ut voluptate?</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -84,15 +112,15 @@
     <div class="modal">
         <div class="modalmask">
             <div class="app" id="app3">
-                <img src="/Img/SynologyUI/folder.svg" alt="">
-                <span>新增資料夾３</span>
+                <i class="far fa-folder-open"></i>
+                <span>會員列表</span>
             </div>
             <div class="app" id="app4">
-                <img src="/Img/SynologyUI/folder.svg" alt="">
+                <i class="far fa-folder-open"></i>
                 <span>新增資料夾４</span>
             </div>
             <div class="app" id="app5">
-                <img src="/Img/SynologyUI/folder.svg" alt="">
+                <i class="far fa-folder-open"></i>
                 <span>新增資料夾５</span>
             </div>
         </div>
@@ -100,24 +128,23 @@
     <section class="appcontainer" id="appcontainer">
         <div class="stealth">
             <div class="app" id="app">
-                <img src="/Img/SynologyUI/folder.svg" alt="">
-                <span>新增資料夾</span>
+                <i class="far fa-folder-open"></i>
+                <span>App</span>
             </div>
 
             <div class="app" id="app2">
-                <img src="/Img/SynologyUI/folder.svg" alt="">
-                <span>新增資料夾２
-                </span>
+                <i class="far fa-folder-open"></i>
+                <span>空白資料夾</span>
             </div>
         </div>
     </section>
     <section class="filescontainer" id="filescontainer">
         <div class="filesnav">
             <div class="leftcontent">
-                <img src="/Img/SynologyUI/folderblack.svg" alt="">
+                <i class="far fa-folder-open"></i>
             </div>
             <div class="midcontent">
-                <span>新增資料夾</span>
+                <span>APP</span>
             </div>
             <div class="rightcontent">
                 <button type="button" class="narrowwindow">－</button>
@@ -138,7 +165,7 @@
                         <img src="/Img/SynologyUI/smallwindow/right-chevron.svg" class="areaicon" alt="">
                         <span>Type1</span>
                     </a>
-                    <div class="tabareacontent is-collapsed collapsedcontrol" id="accordion1" aria-hidden="true">
+                    <div class="tabareacontent is-collapsed" id="accordion1" aria-hidden="true">
                         <div class="areacontent">Type1-1</div>
                         <div class="areacontent">Type1-2</div>
                         <div class="areacontent">Type1-3</div>
@@ -148,7 +175,7 @@
                         <img src="/Img/SynologyUI/smallwindow/right-chevron.svg" class="areaicon" alt="">
                         <span>Type2</span>
                     </a>
-                    <div class="tabareacontent is-collapsed collapsedcontrol" id="accordion2" aria-hidden="true">
+                    <div class="tabareacontent is-collapsed" id="accordion2" aria-hidden="true">
                         <div class="areacontent">Type2-1</div>
                         <div class="areacontent">Type2-2</div>
                         <div class="areacontent">Type2-3</div>
@@ -158,7 +185,7 @@
                         <img src="/Img/SynologyUI/smallwindow/right-chevron.svg" class="areaicon" alt="">
                         <span>Type3</span>
                     </a>
-                    <div class="tabareacontent is-collapsed collapsedcontrol" id="accordion3" aria-hidden="true">
+                    <div class="tabareacontent is-collapsed" id="accordion3" aria-hidden="true">
                         <div class="areacontent">Type3-1</div>
                         <div class="areacontent">Type3-2</div>
                         <div class="areacontent">Type3-3</div>
@@ -179,10 +206,178 @@
             </div>
         </div>
     </section>
+    <section class="emptyfiles">
+        <div class="filesnav">
+            <div class="leftcontent">
+                <i class="far fa-folder-open"></i>
+            </div>
+            <div class="midcontent">
+                <span>空白資料夾</span>
+            </div>
+            <div class="rightcontent">
+                <button type="button" class="narrowwindow">－</button>
+                <button type="button" class="enlargewindow">口</button>
+                <button type="button" class="closewindow">Ｘ</button>
+            </div>
+        </div>
+        <div class="filescontent" id="filescontent"></div>
+    </section>
+    <section class="optioncontainer">
+        <div class="optionheader">
+            <img src="/Img/SynologyUI/option/gear.svg" alt="">
+            <span>Option</span>
+            <div class="optionbtn">
+                <button class="narrow">－</button>
+                <button class="close">Ｘ</button>
+            </div>
+        </div>
+        <div class="optioncontent">
+            <div class="name">
+                <label for="user">Username</label>
+                <input type="text" id="user" value="Name001" disabled>
+            </div>
+            <div class="password">
+                <label for="password">Password</label>
+                <input type="password" id="password">
+            </div>
+            <div class="Newpassword">
+                <label for="Newpassword">Newpassword</label>
+                <input type="password" id="Newpassword">
+            </div>
+            <div class="Cnewpassword">
+                <label for="Cnewpassword">Cnewpassword</label>
+                <input type="password" id="Cnewpassword">
+            </div>
+        </div>
+        <div class="btmbtn">
+            <hr>
+            <div class="btns">
+                <button type="button" class="btnsubmit">確定</button>
+                <button type="button" class="btncancel">取消</button>
+            </div>
+        </div>
+    </section>
+    <section class="memberlist">
+        <div class="listnav">
+            <div class="leftcontent">
+                <i class="far fa-folder-open"></i>
+            </div>
+            <div class="midcontent">
+                <span>會員列表</span>
+            </div>
+            <div class="rightcontent">
+                <button type="button" class="narrowwindow">－</button>
+                <button type="button" class="enlargewindow">口</button>
+                <button type="button" class="closewindow">Ｘ</button>
+            </div>
+        </div>
+        <div class="membercontainer" id="membercontainer">
+            <div class="memberbtns">
+                <!-- <button onclick="sortTable(0)">Name</button> -->
+                <!-- <button onclick="sortTable(1)">Phone</button>
+                <button onclick="sortTable(2)">Birthday</button>
+                <button onclick="sortTable(3)">Gender</button> -->
+            </div>
+            <div class="membercontent" id="membercontent">
+                <div class="memberdetail">
+                    <div class="sorttd">
+                        <p>Jacky</p>
+                    </div>
+                    <div class="sorttd">
+                        <p>0993455612</p>
+                    </div>
+                    <div class="sorttd">
+                        <p>1993/02/01</p>
+                    </div>
+                    <div class="sorttd">
+                        <p>男</p>
+                    </div>
+                </div>
+                <div class="memberdetail">
+                    <div class="sorttd">
+                        <p>Jane</p>
+                    </div>
+                    <div class="sorttd">
+                        <p>0989576498</p>
+                    </div>
+                    <div class="sorttd">
+                        <p>1993/03/01</p>
+                    </div>
+                    <div class="sorttd">
+                        <p>女</p>
+                    </div>
+                </div>
+                <div class="memberdetail">
+                    <div class="sorttd">
+                        <p>Tyler</p>
+                    </div>
+                    <div class="sorttd">
+                        <p>0988456794</p>
+                    </div>
+                    <div class="sorttd">
+                        <p>1993/05/01</p>
+                    </div>
+                    <div class="sorttd">
+                        <p>男</p>
+                    </div>
+                </div>
+                <div class="memberdetail">
+                    <div class="sorttd">
+                        <p>May</p>
+                    </div>
+                    <div class="sorttd">
+                        <p>0972468359</p>
+                    </div>
+                    <div class="sorttd">
+                        <p>1993/04/01</p>
+                    </div>
+                    <div class="sorttd">
+                        <p>女</p>
+                    </div>
+                </div>
+                <div class="memberdetail">
+                    <div class="sorttd">
+                        <p>Jack</p>
+                    </div>
+                    <div class="sorttd">
+                        <p>0987654321</p>
+                    </div>
+                    <div class="sorttd">
+                        <p>1993/01/01</p>
+                    </div>
+                    <div class="sorttd">
+                        <p>男</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="//code.jquery.com/jquery-1.9.1.js"></script>
-    <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+        integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
     <script src="/JS/Synology.js"></script>
+
+    <script>
+        createMemberlist();
+
+        function createMemberlist() {
+            _MEMBERCONTAINER = $('<div class="membercontainer" id="membercontainer">');
+            _MEMBERBTNS = $('<div class="memberbtns">AAAA').appendTo(_MEMBERCONTAINER);
+            _MEMBERCONTENT = $('<div class="membercontent" id="membercontent">').appendTo(_MEMBERCONTAINER);
+            let btnName = ['Name', 'Phone', 'Birthdat', 'Gender'];
+            $.each(btnName, function (i) {
+                _BTN = $('<button>');
+                let btnName = ['Name', 'Phone', 'Birthday', 'Gender'];
+                _BTN.text(btnName[i]);
+                _BTN.attr('onclick', 'sortTable('+ i +')');
+                _BTN.appendTo(_MEMBERBTNS);
+                $('#membercontainer').replaceWith(_MEMBERCONTAINER);
+                console.log(_MEMBERCONTAINER);
+            })
+        }
+    </script>
 </body>
 
 </html>

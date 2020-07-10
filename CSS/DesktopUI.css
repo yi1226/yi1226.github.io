@@ -3,12 +3,14 @@ body {
   margin: 0;
   padding: 0;
   position: relative;
+  max-width: 100%;
+  max-height: 100vh;
 }
 
 body nav {
   width: 100%;
   height: 80px;
-  background-color: #1a1a1a;
+  background-color: #cecece;
 }
 
 body nav .navcontainer {
@@ -34,9 +36,19 @@ body nav .navcontainer .selection .desktop {
   background-color: lightgray;
 }
 
-body nav .navcontainer .selection img {
-  width: 80px;
+body nav .navcontainer .selection .fa-folder-open {
   height: 80px;
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 60px;
 }
 
 body nav .navcontainer .selection .menulist {
@@ -44,6 +56,20 @@ body nav .navcontainer .selection .menulist {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+}
+
+body nav .navcontainer .selection .menulist .fa-th-large {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 60px;
+  margin-right: 20px;
 }
 
 body nav .navcontainer .selection .menulist::after {
@@ -59,13 +85,45 @@ body nav .navcontainer .selection .menulist::after {
 body nav .navcontainer .selection .navapp {
   width: 80px;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.4);
   display: none;
 }
 
-body nav .navcontainer .selection .navapp img {
-  width: 100%;
+body nav .navcontainer .selection .navfiles {
+  width: 80px;
   height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: none;
+}
+
+body nav .navcontainer .selection .navoption {
+  width: 80px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: none;
+  padding: 0px;
+}
+
+body nav .navcontainer .selection .navoption .fa-cogs {
+  height: 80px;
+  width: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 50px;
+}
+
+body nav .navcontainer .selection .navmember {
+  width: 80px;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: none;
 }
 
 body nav .navcontainer .features {
@@ -76,22 +134,47 @@ body nav .navcontainer .features {
 }
 
 body nav .navcontainer .features a {
+  text-decoration: none;
   padding: 0 10px;
 }
 
-body nav .navcontainer .features .message img {
-  width: 60px;
-  height: 100%;
+body nav .navcontainer .features .message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-body nav .navcontainer .features .information img {
-  width: 60px;
-  height: 80px;
+body nav .navcontainer .features .message .fa-comment-dots {
+  font-size: 60px;
 }
 
-body nav .navcontainer .features .searchbar img {
-  width: 60px;
-  height: 100%;
+body nav .navcontainer .features .information {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body nav .navcontainer .features .information .fa-user {
+  font-size: 60px;
+}
+
+body nav .navcontainer .features .searchbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body nav .navcontainer .features .searchbar .fa-search {
+  font-size: 60px;
 }
 
 body nav .navcontent {
@@ -99,6 +182,7 @@ body nav .navcontent {
   top: 80px;
   right: 0px;
   padding-right: 10px;
+  pointer-events: none;
 }
 
 body nav .navcontent .serachBarcontent {
@@ -137,14 +221,14 @@ body nav .navcontent .serachBarcontent button img {
 }
 
 body nav .navcontent .loginarea {
-  opacity: 0;
-  pointer-events: none;
+  pointer-events: all;
+  display: none;
   -webkit-transition: .5s;
   transition: .5s;
   padding: 0 20px 20px 20px;
   background-color: rgba(173, 216, 230, 0.5);
   position: absolute;
-  right: 10px;
+  right: 45px;
   text-align: center;
   color: white;
 }
@@ -156,172 +240,106 @@ body nav .navcontent .loginarea h1 {
           transition-timing-function: ease-in;
 }
 
-body nav .navcontent .loginarea.success h1 {
-  -webkit-transform: translateY(85px);
-          transform: translateY(85px);
-}
-
-body nav .navcontent .loginarea .loginsuccess .username {
-  text-align: start;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-body nav .navcontent .loginarea .loginsuccess .passwordcontainer {
-  text-align: start;
-  margin-top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-body nav .navcontent .loginarea .loginsuccess .remember {
-  margin-top: 10px;
-  text-align: start;
-  position: relative;
-}
-
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover {
-  position: absolute;
-  top: 0;
-  left: -20px;
-}
-
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover {
-  margin: 20px;
-  border-radius: 4px;
-}
-
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover::before {
-  content: "";
-  color: #d7e3e3;
-  font-size: 12px;
-  line-height: 1;
-  padding: 5px;
-}
-
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover .button {
-  position: relative;
-  top: 50%;
-  width: 74px;
-  height: 36px;
-  margin: -20px auto 0 auto;
-  overflow: hidden;
-}
-
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover .button .checkbox {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  opacity: 0;
-  cursor: pointer;
-  z-index: 3;
-}
-
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover .button .knobs {
-  z-index: 2;
-}
-
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover .button .layer {
-  width: 100%;
-  background-color: #ebf7fc;
-  -webkit-transition: 0.3s ease all;
-  transition: 0.3s ease all;
-  z-index: 1;
-}
-
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN {
-  overflow: visible;
-}
-
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN .knobs {
-  -webkit-perspective: 70px;
-          perspective: 70px;
-}
-
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN .knobs::before, body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN .knobs::after {
-  position: absolute;
-  top: 4px;
-  border-radius: 2px;
-  width: 20px;
-  height: 10px;
-  color: #4e4e4e;
-  font-size: 10px;
-  font-weight: bold;
-  text-align: center;
-  line-height: 1;
-  padding: 9px 4px;
-}
-
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN .knobs::before {
-  content: 'YES';
-  left: 4px;
-}
-
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN .knobs::after {
-  content: 'NO';
-  right: 4px;
-}
-
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN .knobs span {
-  position: absolute;
-  top: 4px;
-  border-radius: 2px;
-  right: 4px;
-  width: 33px;
-  height: 28px;
-  background-color: #03a9f4;
-  -webkit-transform: rotateY(0);
-          transform: rotateY(0);
-  -webkit-transform-origin: 0% 50%;
-          transform-origin: 0% 50%;
-  -webkit-transition: 0.6s ease all;
-  transition: 0.6s ease all;
-  z-index: 1;
-}
-
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN .checkbox:checked + .knobs span {
-  -webkit-transform: rotateY(-180deg);
-          transform: rotateY(-180deg);
-  background-color: #f44336;
-}
-
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover #buttonYN .checkbox:checked ~ .layer {
-  background-color: #fcebeb;
-}
-
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .button-cover,
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .knobs,
-body nav .navcontent .loginarea .loginsuccess .remember .toggle-button-cover .layer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-}
-
-body nav .navcontent .loginarea .loginsuccess .Signin {
-  margin-top: 50px;
-}
-
-body nav .navcontent .loginarea .loginsuccess .forget {
-  color: rgba(255, 255, 255, 0.6);
+body nav .navcontent .loginarea .loginsuccess .option {
+  padding: 5px 0;
   text-decoration: none;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+  border-bottom: 1px solid lightgray;
 }
 
-body nav .navcontent .loginarea .loginsuccess .forget:hover {
-  color: goldenrod;
+body nav .navcontent .loginarea .loginsuccess .option:hover {
+  background-color: rgba(58, 193, 238, 0.5);
+}
+
+body nav .navcontent .loginarea .loginsuccess .logout {
+  cursor: pointer;
+  padding: 5px 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+body nav .navcontent .loginarea .loginsuccess .logout:hover {
+  background-color: rgba(58, 193, 238, 0.5);
+}
+
+body nav .navcontent .msgContainer {
+  width: 350px;
+  color: white;
+  padding: 0 10px;
+  background-color: gray;
+  max-height: calc(100vh - 80px);
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  -webkit-transition: .5s;
+  transition: .5s;
+  /* Track */
+  /* Handle */
+  /* Handle on hover */
+}
+
+body nav .navcontent .msgContainer::-webkit-scrollbar {
+  width: 10px;
+  margin-left: 5px;
+}
+
+body nav .navcontent .msgContainer::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+body nav .navcontent .msgContainer::-webkit-scrollbar-thumb {
+  background: #67c9d6;
+}
+
+body nav .navcontent .msgContainer::-webkit-scrollbar-thumb:hover {
+  background: #15b8ce;
+}
+
+body nav .navcontent .msgContainer h2 {
+  padding-top: 10px;
+  margin: 0;
+  text-align: center;
+}
+
+body nav .navcontent .msgContainer .msgContent .msgText {
+  position: relative;
+}
+
+body nav .navcontent .msgContainer .msgContent .msgText img {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20px;
+}
+
+body nav .navcontent .msgContainer .msgContent .msgText h4 {
+  margin: 10px 0;
+}
+
+body nav .navcontent .msgContainer .msgContent .msgText .msgtextcontetnt {
+  height: auto;
+  overflow: hidden;
+  max-height: 50em;
+}
+
+body nav .navcontent .msgContainer .msgContent .msgText .msgtextcontetnt .msgtextdetail p:nth-child(1) {
+  margin: 0;
+}
+
+body nav .navcontent .msgContainer .msgContent .msgText .msgtextcontetnt .msgtextdetail p:nth-child(2) {
+  margin-top: 5px;
+  text-align: justify;
+}
+
+body nav .navcontent .msgContainer .msgContent .msgText .msgtextcontetnt.is-collapsed {
+  max-height: 0;
+}
+
+body nav .navcontent .msgContainer .msgContent .msgText .no-js .msgtextcontetnt.is-collapsed {
+  max-height: auto;
 }
 
 body .modal {
@@ -346,6 +364,7 @@ body .modal .modalmask {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  z-index: 5;
 }
 
 body .modal .modalmask .app {
@@ -357,6 +376,9 @@ body .modal .modalmask .app {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100px;
   height: 80px;
   margin: 30px;
@@ -366,8 +388,21 @@ body .modal .modalmask .app img {
   width: 80px;
 }
 
+body .modal .modalmask .app .fa-folder-open {
+  font-size: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 body .modal .modalmask .app span {
-  color: #3CCDEF;
+  text-align: center;
 }
 
 body .modal.active {
@@ -377,9 +412,13 @@ body .modal.active {
 body .appcontainer {
   height: calc(100vh - 80px);
   width: 100%;
-  background-color: black;
+  background-color: white;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+body .appcontainer.active {
+  background-color: red;
 }
 
 body .appcontainer .stealth {
@@ -400,9 +439,25 @@ body .appcontainer .stealth .app {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100px;
   height: 80px;
   margin-bottom: 30px;
+}
+
+body .appcontainer .stealth .app .fa-folder-open {
+  font-size: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 body .appcontainer .stealth .app img {
@@ -411,7 +466,7 @@ body .appcontainer .stealth .app img {
 }
 
 body .appcontainer .stealth .app span {
-  color: #3CCDEF;
+  text-align: center;
 }
 
 body .filescontainer {
@@ -443,6 +498,10 @@ body .filescontainer .filesnav {
   padding: 5px;
   border-bottom: 0.5px solid black;
   background-color: skyblue;
+}
+
+body .filescontainer .filesnav .leftcontent .fa-folder-open {
+  font-size: 20px;
 }
 
 body .filescontainer .filesnav .leftcontent img {
@@ -621,5 +680,224 @@ body .filescontainer .filescontent .filesright .tabcontents .tabcontent.active {
   height: 100%;
   opacity: 1;
   pointer-events: all;
+}
+
+body .emptyfiles {
+  width: 800px;
+  height: 600px;
+  min-width: 800px;
+  min-height: 600px;
+  margin: auto;
+  border: 5px solid rgba(128, 127, 127, 0.3);
+  border-radius: 10px;
+  background-color: white;
+  position: absolute;
+  top: calc(50% - 300px);
+  left: calc(50% - 400px);
+  display: none;
+}
+
+body .emptyfiles .filesnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  border-bottom: 0.5px solid black;
+  background-color: skyblue;
+}
+
+body .emptyfiles .filesnav .leftcontent .fa-folder-open {
+  font-size: 20px;
+}
+
+body .optioncontainer {
+  width: 800px;
+  height: 600px;
+  min-width: 800px;
+  min-height: 600px;
+  margin: 0 auto;
+  border: 5px solid rgba(128, 127, 127, 0.3);
+  border-radius: 10px;
+  background-color: white;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  position: absolute;
+  top: calc(50% - 300px);
+  left: calc(50% - 400px);
+}
+
+body .optioncontainer .optionheader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  border-bottom: 0.5px solid black;
+  background-color: skyblue;
+}
+
+body .optioncontainer .optionheader img {
+  height: 30px;
+}
+
+body .optioncontainer .optioncontent {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+body .optioncontainer .optioncontent input {
+  font-size: 22px;
+}
+
+body .optioncontainer .optioncontent label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 200px;
+  font-size: 22px;
+}
+
+body .optioncontainer .optioncontent .name {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+body .optioncontainer .optioncontent .password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+body .optioncontainer .optioncontent .Newpassword {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+body .optioncontainer .optioncontent .Cnewpassword {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10px;
+}
+
+body .optioncontainer .btmbtn {
+  padding-bottom: 10px;
+}
+
+body .optioncontainer .btmbtn .btns {
+  padding-right: 10px;
+  text-align: end;
+}
+
+body .optioncontainer .btmbtn .btns button {
+  padding: 5px 10px;
+}
+
+body .memberlist {
+  width: 800px;
+  height: 600px;
+  min-width: 800px;
+  min-height: 600px;
+  margin: 0 auto;
+  border: 5px solid rgba(128, 127, 127, 0.3);
+  border-radius: 10px;
+  background-color: white;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+  position: absolute;
+  top: calc(50% - 300px);
+  left: calc(50% - 400px);
+}
+
+body .memberlist .listnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  border-bottom: 0.5px solid black;
+  background-color: skyblue;
+}
+
+body .memberlist .listnav .leftcontent .fa-folder-open {
+  font-size: 20px;
+}
+
+body .memberlist .listnav img {
+  height: 30px;
+}
+
+body .memberlist .membercontainer .memberbtns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body .memberlist .membercontainer .memberbtns button {
+  width: 25%;
+}
+
+body .memberlist .membercontainer .membercontent .memberdetail {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid black;
+}
+
+body .memberlist .membercontainer .membercontent .memberdetail .sorttd {
+  width: 25%;
+  text-align: center;
+  border-right: 1px solid black;
+}
+
+body .memberlist .membercontainer .membercontent .memberdetail .sorttd:nth-child(1) {
+  border-left: 1px solid black;
 }
 /*# sourceMappingURL=DesktopUI.css.map */
